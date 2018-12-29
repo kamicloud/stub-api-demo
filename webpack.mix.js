@@ -11,5 +11,18 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+mix
+  .react('resources/js/app.js', 'public/js').extract([
+    'antd',
+    'axios',
+
+    'react',
+    'react-dom',
+    'react-redux',
+    'react-router',
+    'react-router-dom',
+    'redux',
+  ]).sourceMaps()
+  .sass('resources/sass/app.scss', 'public/css');
+
+

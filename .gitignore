@@ -1,6 +1,11 @@
+/.idea
+/docker
 /node_modules
 /public/hot
 /public/storage
+/public/js/
+/public/css/
+/public/vendor
 /storage/*.key
 /vendor
 .env

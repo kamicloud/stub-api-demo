@@ -1,0 +1,9 @@
+{
+    "esversion":6,
+    "unused":true,
+    "node":true,
+    "camelcase": true,
+    "latedef": true,
+    "nonew": true,
+    "quotmark": "single"
+}

@@ -1,33 +1,100 @@
+require('./bootstrap.js');
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+import React from 'react'
+import { render } from 'react-dom'
+import { createBrowserHistory } from 'history';
 
-require('./bootstrap');
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import { combineReducers } from 'redux';
+import { BrowserRouter, Route } from 'react-router-dom'
 
-window.Vue = require('vue');
+import * as actionCreators from './actions';
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+import Layout from './Layout';
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+const reducer = require('./reducers').default;
+console.log(reducer)
+const store = createStore(
+  combineReducers(reducer),
+  applyMiddleware(store => next => action => {
+    console.log('dispatching', action)
+    let result = next(action)
+    console.log('next state', store.getState())
+    return result
+  })
+);
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+const history = createBrowserHistory()
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+actionCreators.getInitAction();
 
-const app = new Vue({
-    el: '#app'
-});
+render(
+  <Provider
+    store={store}
+  >
+    <BrowserRouter>
+      <Route path="/">
+
+        <Layout>
+        </Layout>
+      </Route>
+    </BrowserRouter>
+  </Provider>
+  , document.getElementById('app'));
+
+export const dispatch = store.dispatch;
+
+
+
+// export default route = {
+//   path: '/',
+//   component: require('./layout'),
+//   childRoutes: [{
+//     path: '',
+//     component: require('./pages/client/layout'),
+//     childRoutes: [
+//       {
+//         path: '',
+//         component: require('./pages/client/pages/login/index'),
+//       }, {
+//         path: 'login',
+//         component: require('./pages/client/pages/login/index'),
+//       },
+//     ]
+//   }, {
+//     path: 'admin',
+//     component: require('./pages/admin/layout'),
+//     childRoutes: [
+//       {
+//         path: 'notes',
+//         component: App2,
+//       }, {
+//         path: 'reversions',
+//         component: require('./pages/admin/pages/reversions/layout'),
+//         childRoutes: [
+//           { path: ':id', component: require('./pages/admin/pages/reversions/pages/reversion') },
+//           { path: 'figures', component: require('./pages/admin/pages/reversions/pages/figures') },
+//         ]
+//       }, {
+//         path: 'roles',
+//         component: require('./pages/admin/pages/roles/layout'),
+//         childRoutes: [
+
+//         ]
+//       }, {
+//         path: 'sidebars',
+//         component: require('./pages/admin/pages/sidebars/layout'),
+//         childRoutes: [
+//           // { path: 'create', component: require('./pages/admin/pages/sidebars/pages/edit') },
+//         ],
+//       }, {
+//         path: 'users',
+//         component: require('./pages/admin/pages/users/layout'),
+//         childRoutes: [
+//           // { path: '', component: require('./pages/admin/pages/pages/pages/reversion') }
+//         ]
+//       },
+//     ]
+//   }]
+// };

@@ -15,12 +15,49 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+
+            $table->string('name')->comment('名称');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+
             $table->timestamps();
+            $table->softDeletes();
+        });
+        Schema::create('user_roles', function (Blueprint $table) {
+            $table->increments('id');
+
+            $table->bigInteger('user_id');
+            $table->bigInteger('role_id');
+
+            $table->timestamps();
+            $table->softDeletes();
+        });
+        Schema::create('roles', function (Blueprint $table) {
+            $table->increments('id');
+
+            $table->bigInteger('code')->unsigned()->unique();
+            $table->string('name')->default('')->comment('名称');
+            $table->string('comment')->default('')->comment('备注');
+
+        });
+        Schema::create('role_permissions', function(Blueprint $table) {
+            $table->increments('id');
+
+            $table->bigInteger('role_id');
+            $table->bigInteger('permission_id');
+
+            $table->timestamps();
+            $table->softDeletes();
+        });
+        Schema::create('permissions', function (Blueprint $table) {
+            $table->increments('id');
+
+            $table->string('name')->default('')->comment('名称');
+            $table->string('comment')->default('')->comment('备注');
+
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -32,5 +69,9 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('user_roles');
+        Schema::dropIfExists('roles');
+        Schema::dropIfExists('role_permissions');
+        Schema::dropIfExists('permissions');
     }
 }

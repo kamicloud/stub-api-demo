@@ -1,0 +1,10 @@
+- ## Get Started
+  - [Overview](/docs/{{version}}/overview)
+- ## 数据字典
+  - [ErrorCodes](/docs/{{version}}/generated/error-codes)
+  - [Enums](/docs/{{version}}/generated/enums)
+  - [Models](/docs/{{version}}/generated/models)
+- ## 接口文档
+  - [AdminUser](/docs/{{version}}/generated/apis/AdminUser)
+  - [User](/docs/{{version}}/generated/apis/User)
+  - [Teacher](/docs/{{version}}/generated/apis/Teacher)
