@@ -1,6 +1,6 @@
 # User
 
-> {warning} * 用户控制器
+> {warning} 用户控制器
 
 
 ---
@@ -13,7 +13,7 @@
 ### Requests
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|email |* 查询的ID|`String`|true|
+|email |查询的ID|`String`|true|
 |emails | |`String[]`|true|
 |gender | |[`Enums.Gender`](/docs/{{version}}/generated/enums#Gender)|true|
 |genders | |[`Enums.Gender[]`](/docs/{{version}}/generated/enums#Gender)|true|
@@ -31,7 +31,7 @@
 ### Requests
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|id |* 查询的ID|`Integer`|true|
+|id |查询的ID|`Integer`|true|
 |gender | |[`Enums.Gender`](/docs/{{version}}/generated/enums#Gender)|true|
 |page | |`Integer`| |
 |testUser | |[`Models.User`](/docs/{{version}}/generated/models#User)| |

@@ -17,7 +17,6 @@
         "overtrue/laravel-wechat": "^4.0"
     },
     "require-dev": {
-        "nunomaduro/larastan": "^0.3.13",
         "barryvdh/laravel-ide-helper": "^2.5",
         "beyondcode/laravel-dump-server": "^1.0",
         "binarytorch/larecipe": "^1.2",
@@ -26,7 +25,9 @@
         "fzaninotto/faker": "^1.4",
         "laravel/telescope": "^1.0",
         "mockery/mockery": "^1.0",
+        "nikic/php-parser": "^4.1",
         "nunomaduro/collision": "^2.0",
+        "nunomaduro/larastan": "^0.3.13",
         "phpunit/phpunit": "^7.0",
         "squizlabs/php_codesniffer": "^3.4"
     },

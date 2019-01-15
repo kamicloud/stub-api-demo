@@ -22,6 +22,7 @@ class UsersTableSeeder extends Seeder
                 'id' => $i,
                 'name' => 'Ttdnts',
                 'email' => $i . '@qq.com',
+                'avatar' => $i % 2 ? 'https://avatars3.githubusercontent.com/u/25639206?s=88&v=4' : 'https://avatars1.githubusercontent.com/u/44454975?s=88&v=4',
                 'password' => bcrypt('123456'),
             ]);
         }

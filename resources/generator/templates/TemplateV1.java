@@ -48,6 +48,17 @@ class TemplateV1 implements TemplateInterface {
             ACTIVITY
         }
 
+
+//        @Memo(memo = {""}, ignores = {Endpoint.ANDROID})
+//        enum TeacherLeaveReason {
+//            @Memo(memo = "事件")
+//            EVENT,
+//            @Memo(memo = "休息")
+//            RELAX,
+//            @Memo(memo = "活动")
+//            ACTIVITY
+//        }
+
         /**
          * 用户状态
          */
@@ -56,6 +67,7 @@ class TemplateV1 implements TemplateInterface {
             DISABLED(2),
             IN_CLASS(4),
             ;
+
             int value;
 
             UserStatus(int value) {
@@ -90,22 +102,15 @@ class TemplateV1 implements TemplateInterface {
             XXX,
         }
 
-        @StringEnum
-        enum Gender implements FixedEnumValueInterface {
-            UNKNOWN(2),
-            MALE(4),
-            FEMALE(6);
+        enum Gender {
+            UNKNOWN,
+            MALE,
+            FEMALE,
+        }
 
-            int value;
-
-            Gender(int value) {
-                this.value = value;
-            }
-
-            @Override
-            public int getValue() {
-                return value;
-            }
+        enum ArticleStatus {
+            UNKNOWN,
+            UNKNOWN1,
         }
     }
 
@@ -128,26 +133,7 @@ class TemplateV1 implements TemplateInterface {
              */
             @DBField
             String name;
-            /**
-             * 用户的状态
-             */
-            @DBField
-            String email;
-            @DBField
-            @Optional
-            @Mutable
-            Date createdAt;
-            @DBField
-            @Optional
-            @Mutable
-            Date updatedAt;
-
-            @DBField
-            @Optional
-            Models.User child;
-            @DBField
-            @Optional
-            Models.User[] children;
+            String avatar;
         }
 
         /**
@@ -211,9 +197,72 @@ class TemplateV1 implements TemplateInterface {
              */
             String url;
         }
+
+        class Article {
+            @Optional
+            @Mutable
+            Integer id;
+            String title;
+            @Optional
+            String content;
+            Models.User user;
+            Enums.ArticleStatus status;
+            @Optional
+            Integer commentsCount;
+            /**
+             * 需要时用于标记是否收藏
+             */
+            @Optional
+            Boolean favorite;
+            /**
+             * 是否是添加火热标记
+             */
+            @Optional
+            Boolean hot;
+            Date createdAt;
+        }
+
+        class ArticleComment {
+            Integer id;
+            Models.User user;
+            String content;
+            Date createdAt;
+        }
     }
 
     class Controllers {
+        class Article {
+            /**
+             * 获取文章列表
+             */
+            class GetArticles {
+                @Response
+                Models.Article[] articles;
+            }
+
+            /**
+             * 取得一篇文章
+             */
+            class GetArticle {
+                @Request
+                Integer id;
+                @Response
+                Models.Article article;
+            }
+
+            /**
+             * 添加文章
+             */
+            class CreateArticle {
+                @Request
+                String title;
+                @Request
+                String content;
+
+                @Response
+                Models.Article article;
+            }
+        }
         /**
          * 后台用户控制器，用来提供和用户相关的后台接口
          * 多行文本
@@ -287,106 +336,5 @@ class TemplateV1 implements TemplateInterface {
                 Models.User[] users;
             }
         }
-
-        /**
-         * 老师控制器用来提供前台老师接口
-         */
-        @Middleware(name = "某一个作用范围很广的middleware")
-        class Teacher {
-            @API(methods = {MethodType.POST})
-            class AddTeacherLeave {
-                @Request
-                String name;
-                @Request
-                @Optional
-                String[] names;
-                @Request
-                Enums.TeacherLeaveReason reason;
-
-                @Response
-                Models.TeacherLeaveRecord record;
-                @Response
-                @Optional
-                Models.TeacherLeaveRecord records;
-            }
-
-            /**
-             * 约课搜索老师
-             */
-            @API(methods = {MethodType.GET})
-            @Middleware(name = "某一个小范围的middleware")
-            class List {
-                /**
-                 * 教材分类
-                 */
-                @Request
-                Integer sType;
-
-                @Request
-                @Optional
-                Enums.TeacherCatalog catalog;
-
-                @Request
-                @Optional
-                Date date;
-
-                /**
-                 * 分页
-                 */
-                @Request
-                @Optional
-                int p;
-
-                @Request
-                @Optional
-                boolean bind;
-
-                @Request
-                @Optional
-                Enums.Gender gender;
-
-                @Request
-                @Optional
-                Enums.ToolAllow toolAllow;
-
-                @Request
-                @Optional
-                int[] marks;
-
-                @Request
-                @Optional
-                int timeHH;
-
-                @Request
-                @Optional
-                int timeMM;
-
-                /**
-                 * 搜索到的老师，也不知道加什么注释
-                 * 反正加一点试试呗
-                 */
-                @Response
-                Models.Teacher[] teachers;
-            }
-
-            /**
-             * 更新用户的昵称
-             */
-            @API(methods = {MethodType.GET}, transactional = true, path = "xxxxxxxxx")
-            public class UpdateUserName {
-                /**
-                 * 用户id
-                 */
-                @Request
-                int userId;
-
-                @Request
-                String name;
-
-                @Response
-                Models.User user;
-            }
-        }
     }
-
 }

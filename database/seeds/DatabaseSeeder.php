@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersTableSeeder::class);
         $this->call(ArticlesSeeder::class);
         $this->call(WebsiteLayoutsSeeder::class);
-        $this->call(ReversionIgnoresSeeder::class);
         $this->call(TruckSeeder::class);
     }
 }

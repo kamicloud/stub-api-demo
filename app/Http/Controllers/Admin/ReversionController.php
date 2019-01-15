@@ -14,9 +14,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use DB;
-use App\Models\Reversion;
+use App\Models\Revision;
 use App\Models\ReversionIgnore;
-use App\Managers\ReversionManager;
+use App\Managers\RevisionManager;
 use Symfony\Component\Finder\SplFileInfo;
 
 /**
@@ -38,7 +38,7 @@ class ReversionController extends Controller
     public function index()
     {
         $message = [
-            'reversions' => Reversion::withCount(
+            'reversions' => Revision::withCount(
                 [
                     'phpcs',
                     'phpstan',
@@ -65,7 +65,7 @@ class ReversionController extends Controller
     public function show(int $id)
     {
         $data = DB::transaction(function () use ($id) {
-            $reversion = Reversion::where(
+            $reversion = Revision::where(
                 function ($table) use ($id) {
                     $table->where('id', $id);
                 }
@@ -146,7 +146,7 @@ class ReversionController extends Controller
                 ];
             }
         }
-        ReversionManager::saveReversion($phpcs, $phpstan);
+        RevisionManager::saveReversion($phpcs, $phpstan);
         $message = $this->index();
 
         return $message;

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
-use App\Models\Reversion;
+use App\Models\Revision;
 
 class ArticleController extends Controller
 {
@@ -15,7 +15,7 @@ class ArticleController extends Controller
     public function index(Request $request)
     {
         $data = DB::transaction(function () {
-            $reversion = Reversion::with([
+            $reversion = Revision::with([
                 'phpcs',
                 'phpcs.messages',
                 'phpstan',

@@ -1,6 +1,7 @@
 // import "babel-polyfill";
 // import { createBrowserHistory } from 'history';
 import axios from 'axios';
+import { message, Button } from 'antd';
 
 window.axios = axios;
 /**
@@ -37,6 +38,13 @@ axios.interceptors.request.use(function (config) {
   return Promise.reject(error);
 });
 axios.interceptors.response.use(function (config) {
+  console.log('config', config);
+  let { data } = config;
+  if (data.status != 0) {
+    message.error(data.message);
+  } else {
+    config.data = data.data;
+  }
   return config;
 }, function (error) {
   switch (error.response.status) {

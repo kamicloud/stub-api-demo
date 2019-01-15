@@ -1,39 +1,13 @@
 <?php
-/**
- * Test
- *
- * PHP version 5
- *
- * @category A
- * @package  ArrayObjecta
- * @author   Display Name <username@example.com>
- * @license  http://matrix.squiz.net/developer/tools/php_cs/licence MIT
- * @link     http://www.baidu.com
- */
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Test
+ * App\Models\Article
  *
- * @category A
- * @package ArrayObjecta
- * @author Display Name <username@example.com>
- * @license http://matrix.squiz.net/developer/tools/php_cs/licence MIT
- * @link http://www.baidu.com
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\ArticleComment[] $comments
- * @property-read \App\Models\User $user
- * @method static bool|null forceDelete()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article newQuery()
- * @method static \Illuminate\Database\Query\Builder|\App\Models\Article onlyTrashed()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article query()
- * @method static bool|null restore()
- * @method static \Illuminate\Database\Query\Builder|\App\Models\Article withTrashed()
- * @method static \Illuminate\Database\Query\Builder|\App\Models\Article withoutTrashed()
- * @mixin \Eloquent
  * @property int $id
  * @property string $title
  * @property string $content
@@ -42,6 +16,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\ArticleComment[] $comments
+ * @property-read \App\Models\User $user
+ * @method static bool|null forceDelete()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article newQuery()
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article query()
+ * @method static bool|null restore()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article whereContent($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article whereDeletedAt($value)
@@ -50,6 +32,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article whereUserId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\Article withoutTrashed()
+ * @mixin \Eloquent
+ * @property-read \App\Models\ArticleContent $articleContent
  */
 class Article extends Model
 {
@@ -62,22 +48,38 @@ class Article extends Model
     protected $hidden = [];
 
     protected $fillable = [
-        // 'id',
+        'title',
+        'status',
     ];
+
+    protected $appends = [
+        'content',
+    ];
+
+    public function getContentAttribute()
+    {
+        if ($this->relationLoaded('articleContent')) {
+            return $this->articleContent->content ?? null;
+        }
+
+        return null;
+    }
 
     /**
      * 文章作者
      */
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
-    /**
-     * [comments description]
-     */
     public function comments()
     {
         return $this->hasMany(ArticleComment::class);
+    }
+
+    public function articleContent()
+    {
+        return $this->hasOne(ArticleContent::class, 'article_id');
     }
 }

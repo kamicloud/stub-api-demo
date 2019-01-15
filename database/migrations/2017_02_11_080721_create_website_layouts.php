@@ -16,7 +16,7 @@ class CreateWebsiteLayouts extends Migration
         Schema::create('sidebars', function(Blueprint $table) {
             $table->increments('id');
 
-            $table->string('name')->default('')->content('名称');
+            $table->string('name')->default('')->comment('名称');
             $table->string('icon')->default('')->comment('图标');
             $table->string('uri')->default('')->comment('uri');
             $table->integer('parent_id')->default(0);

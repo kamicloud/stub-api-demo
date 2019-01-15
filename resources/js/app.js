@@ -11,7 +11,8 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 import * as actionCreators from './actions';
 
-import Layout from './Layout';
+import AdminLayout from './pages/admin/Layout';
+import ClientLayout from './pages/client/Layout';
 
 const reducer = require('./reducers').default;
 console.log(reducer)
@@ -34,11 +35,10 @@ render(
     store={store}
   >
     <BrowserRouter>
-      <Route path="/">
-
-        <Layout>
-        </Layout>
-      </Route>
+      <div>
+        <Route exact path="/" component={ClientLayout}/>
+        <Route path="/admin" component={AdminLayout} />
+      </div>
     </BrowserRouter>
   </Provider>
   , document.getElementById('app'));

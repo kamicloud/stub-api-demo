@@ -6,64 +6,7 @@
   },
   "item": [
     {
-      "name": "AdminUser * 后台用户控制器，用来提供和用户相关的后台接口\n* 多行文本",
-      "item": [
-        {
-          "name": "GetUsers ",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "strings",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "ints",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                }
-              ],
-              "urlencoded": [
-                {
-                  "key": "strings",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "ints",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                }
-              ]
-            },
-            "url": {
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "path": [
-                "AdminUser",
-                "GetUsers"
-              ]
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "User * 用户控制器",
+      "name": "User 用户控制器",
       "item": [
         {
           "name": "CreateUser ",
@@ -77,7 +20,7 @@
                   "key": "email",
                   "value": "",
                   "type": "text",
-                  "description": "* 查询的ID",
+                  "description": "查询的ID",
                   "disabled": false
                 },
                 {
@@ -121,7 +64,7 @@
                   "key": "email",
                   "value": "",
                   "type": "text",
-                  "description": "* 查询的ID",
+                  "description": "查询的ID",
                   "disabled": false
                 },
                 {
@@ -167,6 +110,8 @@
                 "localhost"
               ],
               "path": [
+                "api",
+                "V1",
                 "User",
                 "CreateUser"
               ]
@@ -185,7 +130,7 @@
                   "key": "id",
                   "value": "",
                   "type": "text",
-                  "description": "* 查询的ID",
+                  "description": "查询的ID",
                   "disabled": false
                 },
                 {
@@ -222,7 +167,7 @@
                   "key": "id",
                   "value": "",
                   "type": "text",
-                  "description": "* 查询的ID",
+                  "description": "查询的ID",
                   "disabled": false
                 },
                 {
@@ -261,6 +206,8 @@
                 "localhost"
               ],
               "path": [
+                "api",
+                "V1",
                 "User",
                 "GetUsers"
               ]
@@ -270,10 +217,10 @@
       ]
     },
     {
-      "name": "Teacher * 老师控制器用来提供前台老师接口",
+      "name": "AdminUser 后台用户控制器，用来提供和用户相关的后台接口\n多行文本",
       "item": [
         {
-          "name": "UpdateUserName * 更新用户的昵称",
+          "name": "GetUsers ",
           "request": {
             "method": "POST",
             "header": [],
@@ -281,14 +228,14 @@
               "mode": "formdata",
               "formdata": [
                 {
-                  "key": "userId",
+                  "key": "strings",
                   "value": "",
                   "type": "text",
-                  "description": "* 用户id",
+                  "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "name",
+                  "key": "ints",
                   "value": "",
                   "type": "text",
                   "description": "",
@@ -297,14 +244,14 @@
               ],
               "urlencoded": [
                 {
-                  "key": "userId",
+                  "key": "strings",
                   "value": "",
                   "type": "text",
-                  "description": "* 用户id",
+                  "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "name",
+                  "key": "ints",
                   "value": "",
                   "type": "text",
                   "description": "",
@@ -318,15 +265,76 @@
                 "localhost"
               ],
               "path": [
-                "Teacher",
-                "UpdateUserName"
+                "api",
+                "V1",
+                "AdminUser",
+                "GetUsers"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Article ",
+      "item": [
+        {
+          "name": "CreateArticle 添加文章",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "content",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                }
+              ],
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "content",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                }
               ]
             },
-            "description": "* 更新用户的昵称"
+            "url": {
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "api",
+                "V1",
+                "Article",
+                "CreateArticle"
+              ]
+            },
+            "description": "添加文章"
           }
         },
         {
-          "name": "List * 约课搜索老师",
+          "name": "GetArticle 取得一篇文章",
           "request": {
             "method": "POST",
             "header": [],
@@ -334,70 +342,7 @@
               "mode": "formdata",
               "formdata": [
                 {
-                  "key": "sType",
-                  "value": "",
-                  "type": "text",
-                  "description": "* 教材分类",
-                  "disabled": false
-                },
-                {
-                  "key": "catalog",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "date",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "p",
-                  "value": "",
-                  "type": "text",
-                  "description": "* 分页",
-                  "disabled": false
-                },
-                {
-                  "key": "bind",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "gender",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "toolAllow",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "marks",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "timeHH",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "timeMM",
+                  "key": "id",
                   "value": "",
                   "type": "text",
                   "description": "",
@@ -406,70 +351,7 @@
               ],
               "urlencoded": [
                 {
-                  "key": "sType",
-                  "value": "",
-                  "type": "text",
-                  "description": "* 教材分类",
-                  "disabled": false
-                },
-                {
-                  "key": "catalog",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "date",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "p",
-                  "value": "",
-                  "type": "text",
-                  "description": "* 分页",
-                  "disabled": false
-                },
-                {
-                  "key": "bind",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "gender",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "toolAllow",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "marks",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "timeHH",
-                  "value": "",
-                  "type": "text",
-                  "description": "",
-                  "disabled": false
-                },
-                {
-                  "key": "timeMM",
+                  "key": "id",
                   "value": "",
                   "type": "text",
                   "description": "",
@@ -483,11 +365,38 @@
                 "localhost"
               ],
               "path": [
-                "Teacher",
-                "List"
+                "api",
+                "V1",
+                "Article",
+                "GetArticle"
               ]
             },
-            "description": "* 约课搜索老师"
+            "description": "取得一篇文章"
+          }
+        },
+        {
+          "name": "GetArticles 获取文章列表",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [],
+              "urlencoded": []
+            },
+            "url": {
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "api",
+                "V1",
+                "Article",
+                "GetArticles"
+              ]
+            },
+            "description": "获取文章列表"
           }
         }
       ]

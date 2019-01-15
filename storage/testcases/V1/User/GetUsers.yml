@@ -1,0 +1,8 @@
+---
+api: /api/V1/User/GetUsers
+id:
+gender:
+page:
+testUser:
+testUsers:
+---

@@ -1,0 +1,6 @@
+---
+api: /api/V1/Teacher/AddTeacherLeave
+name:
+names:
+reason:
+---

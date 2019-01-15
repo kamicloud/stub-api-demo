@@ -1,0 +1,13 @@
+---
+api: /api/V1/Teacher/List
+sType:
+catalog:
+date:
+p:
+bind:
+gender:
+toolAllow:
+marks:
+timeHH:
+timeMM:
+---

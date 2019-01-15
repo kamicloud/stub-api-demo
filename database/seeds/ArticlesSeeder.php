@@ -18,14 +18,15 @@ class ArticlesSeeder extends Seeder
         $i = 0;
         while ($i < 20) {
             $i++;
-            Article::create([
-                'title' => 'aaa' . $i,
-                'content' => 'bbb' . $i,
+            $article = Article::create([
+                'title' => str_random(20),
                 'user_id' => 1,
                 'status' => 1,
             ]);
+            $article->articleContent()->create([
+                'content' => str_random(2000),
+            ]);
             ArticleComment::create([
-                'title' => 'aaa' . $i,
                 'content' => 'bbb' . $i,
                 'article_id' => $i,
                 'user_id' => 1,

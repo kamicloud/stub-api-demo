@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4a6cf7c910527acfedef06ba3362afc",
+    "content-hash": "b57564ec9e32454e81c67fb2b63c99b1",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -687,7 +687,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ttdnts/APIGenerator.git",
-                "reference": "048619530628d43fd20964b2bd56b5bb7ebd7357"
+                "reference": "26d193a3996aebf8023f00b23c83042275bba6ce"
             },
             "require": {
                 "ext-json": "*",
@@ -725,7 +725,7 @@
                 }
             ],
             "description": "API Generator",
-            "time": "2019-01-15T10:32:16+00:00"
+            "time": "2019-01-15T14:00:33+00:00"
         },
         {
             "name": "laravel/framework",

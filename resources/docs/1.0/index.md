@@ -5,6 +5,6 @@
   - [Enums](/docs/{{version}}/generated/enums)
   - [Models](/docs/{{version}}/generated/models)
 - ## 接口文档
-  - [AdminUser](/docs/{{version}}/generated/apis/AdminUser)
   - [User](/docs/{{version}}/generated/apis/User)
-  - [Teacher](/docs/{{version}}/generated/apis/Teacher)
+  - [AdminUser](/docs/{{version}}/generated/apis/AdminUser)
+  - [Article](/docs/{{version}}/generated/apis/Article)

@@ -1,29 +1,28 @@
   - [User](#User)
   - [UserProfile](#UserProfile)
   - [SharePayload](#SharePayload)
+  - [Article](#Article)
+  - [TeacherLeaveRecord](#TeacherLeaveRecord)
   - [Teacher](#Teacher)
+  - [ArticleComment](#ArticleComment)
 
 <a name="User"></a>
 ## User
 
-> {warning} * 用户信息
-* 第二行
+> {warning} 用户信息
+第二行
 
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|id |* 一个注释|`Integer`|true|
-|name |* 这里只是留了一个备注|`String`|true|
-|email |* 用户的状态|`String`|true|
-|createdAt | |`Date`| |
-|updatedAt | |`Date`| |
-|child | |[`Models.User`](/docs/{{version}}/generated/models#User)| |
-|children | |[`Models.User[]`](/docs/{{version}}/generated/models#User)| |
+|id |一个注释|`Integer`|true|
+|name |这里只是留了一个备注|`String`|true|
+|avatar | |`String`|true|
 
 <a name="UserProfile"></a>
 ## UserProfile
 
-> {warning} * 用户的基本信息
+> {warning} 用户的基本信息
 
 ### Attributes
 |Key|Description|Type|Required|
@@ -34,20 +33,44 @@
 <a name="SharePayload"></a>
 ## SharePayload
 
-> {warning} * 一个分享场景的抽象
+> {warning} 一个分享场景的抽象
 
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|title |* 分享的标题|`String`|true|
-|description |* 分享的描述|`String`|true|
-|icon |* 一个缩略图|`String`|true|
-|url |* 点进去的链接|`String`|true|
+|title |分享的标题|`String`|true|
+|description |分享的描述|`String`|true|
+|icon |一个缩略图|`String`|true|
+|url |点进去的链接|`String`|true|
+
+<a name="Article"></a>
+## Article
+### Attributes
+|Key|Description|Type|Required|
+|:-|:-|:-|:-|
+|id | |`Integer`| |
+|title | |`String`|true|
+|content | |`String`| |
+|user | |[`Models.User`](/docs/{{version}}/generated/models#User)|true|
+|status | |[`Enums.ArticleStatus`](/docs/{{version}}/generated/enums#ArticleStatus)|true|
+|commentsCount | |`Integer`| |
+|favorite |需要时用于标记是否收藏|`Boolean`| |
+|hot |是否是添加火热标记|`Boolean`| |
+|createdAt | |`Date`|true|
+
+<a name="TeacherLeaveRecord"></a>
+## TeacherLeaveRecord
+### Attributes
+|Key|Description|Type|Required|
+|:-|:-|:-|:-|
+|id | |`Integer`|true|
+|tname | |`String`|true|
+|reason | |[`Enums.TeacherLeaveReason`](/docs/{{version}}/generated/enums#TeacherLeaveReason)|true|
 
 <a name="Teacher"></a>
 ## Teacher
 
-> {warning} * 模拟一个老师的信息
+> {warning} 模拟一个老师的信息
 
 ### Attributes
 |Key|Description|Type|Required|
@@ -57,12 +80,22 @@
 |pic | |`String`|true|
 |marks | |`int[]`|true|
 |catalog | |[`Enums.TeacherCatalog`](/docs/{{version}}/generated/enums#TeacherCatalog)|true|
-|teachers | |`Teacher[]`|true|
-|goodCmtRate |* 好评率，以1为单位|`float`|true|
+|teachers | |[`Models.Teacher[]`](/docs/{{version}}/generated/models#Teacher)|true|
+|goodCmtRate |好评率，以1为单位|`float`|true|
 |isMyFave | |`boolean`|true|
 |openClass | |`int[]`|true|
 |okClass | |`int`|true|
 |classNum | |`int`|true|
 |sortTchTime | |`Date`|true|
 |isRecommended | |`boolean`|true|
+
+<a name="ArticleComment"></a>
+## ArticleComment
+### Attributes
+|Key|Description|Type|Required|
+|:-|:-|:-|:-|
+|id | |`Integer`|true|
+|user | |[`Models.User`](/docs/{{version}}/generated/models#User)|true|
+|content | |`String`|true|
+|createdAt | |`Date`|true|
 

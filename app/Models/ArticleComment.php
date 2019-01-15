@@ -40,7 +40,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class ArticleComment extends Model
 {
-
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];

@@ -14,7 +14,7 @@ class IgersangCn extends Migration
     public function up()
     {
         Schema::create('gersang_items', function(Blueprint $table) {
-            $table->increments();
+            $table->increments('id');
 
             $table->string('name')->default('');
 
@@ -24,7 +24,7 @@ class IgersangCn extends Migration
         });
 
         Schema::create('gersang_mercenaries', function(Blueprint $table) {
-            $table->increments();
+            $table->increments('id');
 
             $table->string('name')->default('');
 
@@ -36,10 +36,6 @@ class IgersangCn extends Migration
             $table->integer('dex')->default(0);
             $table->integer('vit')->default(0);
             $table->integer('int')->default(0);
-            $table->integer('str')->default(0);
-
-            $table->integer('')->default(0);
-            $table->integer('')->default(0);
 
 
             $table->timestamps();
