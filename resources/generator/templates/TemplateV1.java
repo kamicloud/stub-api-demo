@@ -1,8 +1,6 @@
 package templates;
 
 import com.kamicloud.generator.annotations.*;
-import com.kamicloud.generator.interfaces.FixedEnumValueInterface;
-import com.kamicloud.generator.interfaces.TemplateInterface;
 
 import java.util.Date;
 
@@ -10,7 +8,7 @@ import java.util.Date;
  * skdjflsd
  */
 @SuppressWarnings("unused")
-class TemplateV1 implements TemplateInterface {
+class TemplateV1 {
 
 
     public static class Enums {

@@ -687,7 +687,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ttdnts/APIGenerator.git",
-                "reference": "26d193a3996aebf8023f00b23c83042275bba6ce"
+                "reference": "87c883756bdd3477017fabc21b0859a303980816"
             },
             "require": {
                 "ext-json": "*",
@@ -712,7 +712,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "YetAnotherGenerator\\": "src/main/php/"
+                    "YetAnotherGenerator\\lib\\": "src/main/php/"
                 }
             },
             "license": [
@@ -725,20 +725,20 @@
                 }
             ],
             "description": "API Generator",
-            "time": "2019-01-15T14:00:33+00:00"
+            "time": "2019-01-16T16:50:09+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v5.7.20",
+            "version": "v5.7.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "10cd20294b5668f90ba91996236834e71f7ff670"
+                "reference": "25f74458a242b61cc9e9c09d31f94fb13ed805f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/10cd20294b5668f90ba91996236834e71f7ff670",
-                "reference": "10cd20294b5668f90ba91996236834e71f7ff670",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/25f74458a242b61cc9e9c09d31f94fb13ed805f3",
+                "reference": "25f74458a242b61cc9e9c09d31f94fb13ed805f3",
                 "shasum": ""
             },
             "require": {
@@ -871,7 +871,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-01-08T14:39:11+00:00"
+            "time": "2019-01-15T15:20:32+00:00"
         },
         {
             "name": "laravel/nexmo-notification-channel",
