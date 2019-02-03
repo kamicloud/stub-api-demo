@@ -1,6 +1,6 @@
 package templates;
 
-import com.kamicloud.generator.annotations.*;
+import definitions.annotations.*;
 
 import java.util.Date;
 
@@ -46,17 +46,6 @@ class TemplateV1 {
             ACTIVITY
         }
 
-
-//        @Memo(memo = {""}, ignores = {Endpoint.ANDROID})
-//        enum TeacherLeaveReason {
-//            @Memo(memo = "事件")
-//            EVENT,
-//            @Memo(memo = "休息")
-//            RELAX,
-//            @Memo(memo = "活动")
-//            ACTIVITY
-//        }
-
         /**
          * 用户状态
          */
@@ -65,7 +54,6 @@ class TemplateV1 {
             DISABLED(2),
             IN_CLASS(4),
             ;
-
             int value;
 
             UserStatus(int value) {
@@ -280,7 +268,7 @@ class TemplateV1 {
          */
         public class User {
             @API(methods = {MethodType.POST, MethodType.DELETE})
-            @Middleware(name = "某一个小范围的middleware")
+            // @Middleware("某一个小范围的middleware")
             class GetUsers {
                 /**
                  * 查询的ID
@@ -335,4 +323,5 @@ class TemplateV1 {
             }
         }
     }
+
 }

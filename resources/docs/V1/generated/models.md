@@ -51,8 +51,8 @@
 |id | |`Integer`| |
 |title | |`String`|true|
 |content | |`String`| |
-|user | |[`Models.User`](/docs/{{version}}/generated/models#User)|true|
-|status | |[`Enums.ArticleStatus`](/docs/{{version}}/generated/enums#ArticleStatus)|true|
+|user | |`User`|true|
+|status | |`ArticleStatus`|true|
 |commentsCount | |`Integer`| |
 |favorite |需要时用于标记是否收藏|`Boolean`| |
 |hot |是否是添加火热标记|`Boolean`| |
@@ -65,7 +65,7 @@
 |:-|:-|:-|:-|
 |id | |`Integer`|true|
 |tname | |`String`|true|
-|reason | |[`Enums.TeacherLeaveReason`](/docs/{{version}}/generated/enums#TeacherLeaveReason)|true|
+|reason | |`TeacherLeaveReason`|true|
 
 <a name="Teacher"></a>
 ## Teacher
@@ -79,8 +79,8 @@
 |nickname | |`String`|true|
 |pic | |`String`|true|
 |marks | |`int[]`|true|
-|catalog | |[`Enums.TeacherCatalog`](/docs/{{version}}/generated/enums#TeacherCatalog)|true|
-|teachers | |[`Models.Teacher[]`](/docs/{{version}}/generated/models#Teacher)|true|
+|catalog | |`TeacherCatalog`|true|
+|teachers | |`Teacher[]`|true|
 |goodCmtRate |好评率，以1为单位|`float`|true|
 |isMyFave | |`boolean`|true|
 |openClass | |`int[]`|true|
@@ -95,7 +95,7 @@
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
 |id | |`Integer`|true|
-|user | |[`Models.User`](/docs/{{version}}/generated/models#User)|true|
+|user | |`User`|true|
 |content | |`String`|true|
 |createdAt | |`Date`|true|
 

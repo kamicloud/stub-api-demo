@@ -12,7 +12,7 @@ class TeacherLeaveReasonEnum extends BaseEnum
 
     public const ACTIVITY = 2;
 
-    protected const _MAP = [
+    public const _MAP = [
         self::RELAX => 'RELAX',
         self::EVENT => 'EVENT',
         self::ACTIVITY => 'ACTIVITY',

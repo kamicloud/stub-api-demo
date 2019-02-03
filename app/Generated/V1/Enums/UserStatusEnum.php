@@ -12,7 +12,7 @@ class UserStatusEnum extends BaseEnum
 
     public const IN_CLASS = 4;
 
-    protected const _MAP = [
+    public const _MAP = [
         self::DISABLED => 'DISABLED',
         self::INIT => 'INIT',
         self::IN_CLASS => 'IN_CLASS',

@@ -2,7 +2,7 @@
 
 namespace App\Generated\Exceptions;
 
-use YetAnotherGenerator\BaseException;
+use YetAnotherGenerator\Exceptions\BaseException;
 
 class ObjectNotFoundException extends BaseException
 {

@@ -12,7 +12,7 @@ class GenderEnum extends BaseEnum
 
     public const FEMALE = 2;
 
-    protected const _MAP = [
+    public const _MAP = [
         self::UNKNOWN => 'UNKNOWN',
         self::MALE => 'MALE',
         self::FEMALE => 'FEMALE',

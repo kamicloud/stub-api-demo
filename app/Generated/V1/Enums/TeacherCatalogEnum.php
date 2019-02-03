@@ -12,7 +12,7 @@ class TeacherCatalogEnum extends BaseEnum
 
     public const XXX = 2;
 
-    protected const _MAP = [
+    public const _MAP = [
         self::PHH => 'PHH',
         self::NSH => 'NSH',
         self::XXX => 'XXX',

@@ -166,7 +166,7 @@ class TeacherModel extends BaseModel
             ['marks', 'marks', false, true, 'bail|required|int', false, false, false],
             ['catalog', 'catalog', false, false, TeacherCatalogEnum::class, false, false, true],
             ['teachers', 'teachers', true, true, TeacherModel::class, false, false, false],
-            ['goodCmtRate', 'good_cmt_rate', false, false, 'bail|required|float', false, false, false],
+            ['goodCmtRate', 'good_cmt_rate', false, false, 'bail|required|numeric', false, false, false],
             ['isMyFave', 'is_my_fave', false, false, 'bail|required|boolean', false, false, false],
             ['openClass', 'open_class', false, true, 'bail|required|int', false, false, false],
             ['okClass', 'ok_class', false, false, 'bail|required|int', false, false, false],

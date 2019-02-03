@@ -8,7 +8,7 @@ class ToolAllowEnum extends BaseEnum
 {
     public const XXX = 0;
 
-    protected const _MAP = [
+    public const _MAP = [
         self::XXX => 'XXX',
     ];
 

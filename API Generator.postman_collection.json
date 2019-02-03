@@ -107,7 +107,7 @@
             "url": {
               "protocol": "http",
               "host": [
-                "localhost"
+                "{{host}}"
               ],
               "path": [
                 "api",
@@ -203,7 +203,7 @@
             "url": {
               "protocol": "http",
               "host": [
-                "localhost"
+                "{{host}}"
               ],
               "path": [
                 "api",
@@ -262,7 +262,7 @@
             "url": {
               "protocol": "http",
               "host": [
-                "localhost"
+                "{{host}}"
               ],
               "path": [
                 "api",
@@ -321,7 +321,7 @@
             "url": {
               "protocol": "http",
               "host": [
-                "localhost"
+                "{{host}}"
               ],
               "path": [
                 "api",
@@ -362,7 +362,7 @@
             "url": {
               "protocol": "http",
               "host": [
-                "localhost"
+                "{{host}}"
               ],
               "path": [
                 "api",
@@ -387,7 +387,7 @@
             "url": {
               "protocol": "http",
               "host": [
-                "localhost"
+                "{{host}}"
               ],
               "path": [
                 "api",

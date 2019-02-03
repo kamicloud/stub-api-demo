@@ -10,7 +10,7 @@ class PayWayEnum extends BaseEnum
 
     public const WECHAT = 'WECHAT';
 
-    protected const _MAP = [
+    public const _MAP = [
         self::ALIPAY => 'ALIPAY',
         self::WECHAT => 'WECHAT',
     ];

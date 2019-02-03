@@ -15,16 +15,16 @@
 |:-|:-|:-|:-|
 |email |查询的ID|`String`|true|
 |emails | |`String[]`|true|
-|gender | |[`Enums.Gender`](/docs/{{version}}/generated/enums#Gender)|true|
-|genders | |[`Enums.Gender[]`](/docs/{{version}}/generated/enums#Gender)|true|
+|gender | |`Gender`|true|
+|genders | |`Gender[]`|true|
 |id | |`Integer`|true|
 |ids | |`Integer[]`|true|
 
 ### Responses
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|user | |[`Models.User`](/docs/{{version}}/generated/models#User)|true|
-|users | |[`Models.User[]`](/docs/{{version}}/generated/models#User)|true|
+|user | |`User`|true|
+|users | |`User[]`|true|
 
 <a name="GetUsers"></a>
 ## GetUsers
@@ -32,14 +32,14 @@
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
 |id |查询的ID|`Integer`|true|
-|gender | |[`Enums.Gender`](/docs/{{version}}/generated/enums#Gender)|true|
+|gender | |`Gender`|true|
 |page | |`Integer`| |
-|testUser | |[`Models.User`](/docs/{{version}}/generated/models#User)| |
-|testUsers | |[`Models.User[]`](/docs/{{version}}/generated/models#User)| |
+|testUser | |`User`| |
+|testUsers | |`User[]`| |
 
 ### Responses
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
 |val | |`String`|true|
-|user | |[`Models.User`](/docs/{{version}}/generated/models#User)|true|
+|user | |`User`|true|
 

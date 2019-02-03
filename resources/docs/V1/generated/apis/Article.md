@@ -20,7 +20,7 @@
 ### Responses
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|article | |[`Models.Article`](/docs/{{version}}/generated/models#Article)|true|
+|article | |`Article`|true|
 
 <a name="GetArticle"></a>
 ## GetArticle
@@ -35,7 +35,7 @@
 ### Responses
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|article | |[`Models.Article`](/docs/{{version}}/generated/models#Article)|true|
+|article | |`Article`|true|
 
 <a name="GetArticles"></a>
 ## GetArticles
@@ -49,5 +49,5 @@
 ### Responses
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|articles | |[`Models.Article[]`](/docs/{{version}}/generated/models#Article)|true|
+|articles | |`Article[]`|true|
 
