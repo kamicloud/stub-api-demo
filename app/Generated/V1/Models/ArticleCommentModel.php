@@ -4,6 +4,7 @@ namespace App\Generated\V1\Models;
 
 use YetAnotherGenerator\BaseModel;
 use App\Generated\V1\Models\UserModel;
+use YetAnotherGenerator\Utils\Constants;
 use YetAnotherGenerator\ValueHelper;
 
 class ArticleCommentModel extends BaseModel
@@ -58,10 +59,10 @@ class ArticleCommentModel extends BaseModel
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', false, false, 'bail|required|Integer', false, false, false],
-            ['user', 'user', true, false, UserModel::class, false, false, false],
-            ['content', 'content', false, false, 'bail|required|String', false, false, false],
-            ['createdAt', 'created_at', false, false, 'Date', false, false, false],
+            ['id', 'id', 'bail|required|Integer', Constants::IS_OPTIONAL],
+            ['user', 'user', UserModel::class, Constants::IS_MODEL],
+            ['content', 'content', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['createdAt', 'created_at', 'Date', null],
         ];
     }
 

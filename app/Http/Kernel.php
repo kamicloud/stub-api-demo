@@ -38,9 +38,9 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
-            'throttle:60,1',
-            'bindings',
-            \YetAnotherGenerator\GeneratorMiddleware::class,
+//            'throttle:60,1',
+//            'bindings',
+            \YetAnotherGenerator\Http\Middleware\GeneratorMiddleware::class,
         ],
     ];
 

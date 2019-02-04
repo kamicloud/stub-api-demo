@@ -2,6 +2,7 @@
 
 namespace App\Generated\V1\Messages\AdminUser;
 
+use YetAnotherGenerator\Utils\Constants;
 use YetAnotherGenerator\BaseMessage;
 use YetAnotherGenerator\ValueHelper;
 
@@ -25,8 +26,8 @@ class GetUsersMessage extends BaseMessage
     public function requestRules()
     {
         return [
-            ['strings', 'strings', false, true, 'bail|required|String', false, false, false],
-            ['ints', 'ints', false, true, 'bail|required|int', false, false, false],
+            ['strings', 'strings', 'bail|required|String', Constants::IS_OPTIONAL | Constants::IS_ARRAY],
+            ['ints', 'ints', 'bail|required|int', Constants::IS_OPTIONAL | Constants::IS_ARRAY],
         ];
     }
 

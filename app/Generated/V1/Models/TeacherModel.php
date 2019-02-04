@@ -3,6 +3,7 @@
 namespace App\Generated\V1\Models;
 
 use YetAnotherGenerator\BaseModel;
+use YetAnotherGenerator\Utils\Constants;
 use App\Generated\V1\Enums\TeacherCatalogEnum;
 use YetAnotherGenerator\ValueHelper;
 
@@ -160,19 +161,19 @@ class TeacherModel extends BaseModel
     public function getAttributeMap()
     {
         return [
-            ['teacherId', 'teacher_id', false, false, 'bail|required|int', false, false, false],
-            ['nickname', 'nickname', false, false, 'bail|required|String', false, false, false],
-            ['pic', 'pic', false, false, 'bail|required|String', false, false, false],
-            ['marks', 'marks', false, true, 'bail|required|int', false, false, false],
-            ['catalog', 'catalog', false, false, TeacherCatalogEnum::class, false, false, true],
-            ['teachers', 'teachers', true, true, TeacherModel::class, false, false, false],
-            ['goodCmtRate', 'good_cmt_rate', false, false, 'bail|required|numeric', false, false, false],
-            ['isMyFave', 'is_my_fave', false, false, 'bail|required|boolean', false, false, false],
-            ['openClass', 'open_class', false, true, 'bail|required|int', false, false, false],
-            ['okClass', 'ok_class', false, false, 'bail|required|int', false, false, false],
-            ['classNum', 'class_num', false, false, 'bail|required|int', false, false, false],
-            ['sortTchTime', 'sort_tch_time', false, false, 'Date', false, false, false],
-            ['isRecommended', 'is_recommended', false, false, 'bail|required|boolean', false, false, false],
+            ['teacherId', 'teacher_id', 'bail|required|int', Constants::IS_OPTIONAL],
+            ['nickname', 'nickname', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['pic', 'pic', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['marks', 'marks', 'bail|required|int', Constants::IS_OPTIONAL | Constants::IS_ARRAY],
+            ['catalog', 'catalog', TeacherCatalogEnum::class, Constants::IS_ENUM],
+            ['teachers', 'teachers', TeacherModel::class, Constants::IS_MODEL | Constants::IS_ARRAY],
+            ['goodCmtRate', 'good_cmt_rate', 'bail|required|numeric', Constants::IS_OPTIONAL],
+            ['isMyFave', 'is_my_fave', 'bail|required|boolean', Constants::IS_OPTIONAL],
+            ['openClass', 'open_class', 'bail|required|int', Constants::IS_OPTIONAL | Constants::IS_ARRAY],
+            ['okClass', 'ok_class', 'bail|required|int', Constants::IS_OPTIONAL],
+            ['classNum', 'class_num', 'bail|required|int', Constants::IS_OPTIONAL],
+            ['sortTchTime', 'sort_tch_time', 'Date', null],
+            ['isRecommended', 'is_recommended', 'bail|required|boolean', Constants::IS_OPTIONAL],
         ];
     }
 

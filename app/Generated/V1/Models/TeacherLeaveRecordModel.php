@@ -3,6 +3,7 @@
 namespace App\Generated\V1\Models;
 
 use YetAnotherGenerator\BaseModel;
+use YetAnotherGenerator\Utils\Constants;
 use App\Generated\V1\Enums\TeacherLeaveReasonEnum;
 use YetAnotherGenerator\ValueHelper;
 
@@ -47,9 +48,9 @@ class TeacherLeaveRecordModel extends BaseModel
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', false, false, 'bail|required|Integer', false, false, false],
-            ['tname', 'tname', false, false, 'bail|required|String', false, false, false],
-            ['reason', 'reason', false, false, TeacherLeaveReasonEnum::class, false, false, true],
+            ['id', 'id', 'bail|required|Integer', Constants::IS_OPTIONAL],
+            ['tname', 'tname', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['reason', 'reason', TeacherLeaveReasonEnum::class, Constants::IS_ENUM],
         ];
     }
 

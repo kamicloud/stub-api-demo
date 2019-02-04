@@ -3,6 +3,7 @@
 namespace App\Generated\V1\Models;
 
 use YetAnotherGenerator\BaseModel;
+use YetAnotherGenerator\Utils\Constants;
 use YetAnotherGenerator\ValueHelper;
 
 class UserModel extends BaseModel
@@ -52,9 +53,9 @@ class UserModel extends BaseModel
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', false, false, 'bail|required|Integer', false, false, false],
-            ['name', 'name', false, false, 'bail|required|String', false, false, false],
-            ['avatar', 'avatar', false, false, 'bail|required|String', false, false, false],
+            ['id', 'id', 'bail|required|Integer', Constants::IS_OPTIONAL],
+            ['name', 'name', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['avatar', 'avatar', 'bail|required|String', Constants::IS_OPTIONAL],
         ];
     }
 

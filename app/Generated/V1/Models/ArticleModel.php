@@ -4,6 +4,7 @@ namespace App\Generated\V1\Models;
 
 use YetAnotherGenerator\BaseModel;
 use App\Generated\V1\Models\UserModel;
+use YetAnotherGenerator\Utils\Constants;
 use YetAnotherGenerator\ValueHelper;
 use App\Generated\V1\Enums\ArticleStatusEnum;
 
@@ -120,15 +121,15 @@ class ArticleModel extends BaseModel
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', false, false, 'bail|nullable|Integer', true, false, false],
-            ['title', 'title', false, false, 'bail|required|String', false, false, false],
-            ['content', 'content', false, false, 'bail|nullable|String', true, false, false],
-            ['user', 'user', true, false, UserModel::class, false, false, false],
-            ['status', 'status', false, false, ArticleStatusEnum::class, false, false, true],
-            ['commentsCount', 'comments_count', false, false, 'bail|nullable|Integer', true, false, false],
-            ['favorite', 'favorite', false, false, 'bail|nullable|Boolean', true, false, false],
-            ['hot', 'hot', false, false, 'bail|nullable|Boolean', true, false, false],
-            ['createdAt', 'created_at', false, false, 'Date', false, false, false],
+            ['id', 'id', 'bail|nullable|Integer', null],
+            ['title', 'title', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['content', 'content', 'bail|nullable|String', null],
+            ['user', 'user', UserModel::class, Constants::IS_MODEL],
+            ['status', 'status', ArticleStatusEnum::class, Constants::IS_ENUM],
+            ['commentsCount', 'comments_count', 'bail|nullable|Integer', null],
+            ['favorite', 'favorite', 'bail|nullable|Boolean', null],
+            ['hot', 'hot', 'bail|nullable|Boolean', null],
+            ['createdAt', 'created_at', 'Date', null],
         ];
     }
 

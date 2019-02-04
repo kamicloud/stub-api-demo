@@ -4,7 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 use YetAnotherGenerator\Exceptions\Handler as ExceptionHandler;
-use YetAnotherGenerator\BaseException;
+use YetAnotherGenerator\Exceptions\BaseException;
 
 class Handler extends ExceptionHandler
 {

@@ -2,6 +2,7 @@
 
 namespace App\Generated\V1\Messages\Article;
 
+use YetAnotherGenerator\Utils\Constants;
 use YetAnotherGenerator\BaseMessage;
 use App\Generated\V1\Models\ArticleModel;
 use YetAnotherGenerator\ValueHelper;
@@ -21,14 +22,14 @@ class GetArticleMessage extends BaseMessage
     public function requestRules()
     {
         return [
-            ['id', 'id', false, false, 'bail|required|Integer', false, false, false],
+            ['id', 'id', 'bail|required|Integer', Constants::IS_OPTIONAL],
         ];
     }
 
     public function responseRules()
     {
         return [
-            ['article', 'article', true, false, ArticleModel::class, false, false, false],
+            ['article', 'article', ArticleModel::class, Constants::IS_MODEL],
         ];
     }
 

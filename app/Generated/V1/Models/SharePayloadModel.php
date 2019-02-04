@@ -3,6 +3,7 @@
 namespace App\Generated\V1\Models;
 
 use YetAnotherGenerator\BaseModel;
+use YetAnotherGenerator\Utils\Constants;
 use YetAnotherGenerator\ValueHelper;
 
 class SharePayloadModel extends BaseModel
@@ -69,10 +70,10 @@ class SharePayloadModel extends BaseModel
     public function getAttributeMap()
     {
         return [
-            ['title', 'title', false, false, 'bail|required|String', false, false, false],
-            ['description', 'description', false, false, 'bail|required|String', false, false, false],
-            ['icon', 'icon', false, false, 'bail|required|String', false, false, false],
-            ['url', 'url', false, false, 'bail|required|String', false, false, false],
+            ['title', 'title', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['description', 'description', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['icon', 'icon', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['url', 'url', 'bail|required|String', Constants::IS_OPTIONAL],
         ];
     }
 

@@ -75,8 +75,8 @@
             "url": "https://packagist.phpcomposer.com"
         },
         {
-            "type": "git",
-            "url": "https://github.com/Ttdnts/APIGenerator.git"
+            "type": "path",
+            "url": "C:\\Users\\Ttdnts\\IdeaProjects\\APIGenerator"
         }
     ]
 }

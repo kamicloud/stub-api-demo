@@ -3,6 +3,7 @@
 namespace App\Generated\V1\Messages\User;
 
 use App\Generated\V1\Models\UserModel;
+use YetAnotherGenerator\Utils\Constants;
 use YetAnotherGenerator\BaseMessage;
 use YetAnotherGenerator\ValueHelper;
 use App\Generated\V1\Enums\GenderEnum;
@@ -56,20 +57,20 @@ class CreateUserMessage extends BaseMessage
     public function requestRules()
     {
         return [
-            ['email', 'email', false, false, 'bail|required|String', false, false, false],
-            ['emails', 'emails', false, true, 'bail|required|String', false, false, false],
-            ['gender', 'gender', false, false, GenderEnum::class, false, false, true],
-            ['genders', 'genders', false, true, GenderEnum::class, false, false, true],
-            ['id', 'id', false, false, 'bail|required|Integer', false, false, false],
-            ['ids', 'ids', false, true, 'bail|required|Integer', false, false, false],
+            ['email', 'email', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['emails', 'emails', 'bail|required|String', Constants::IS_OPTIONAL | Constants::IS_ARRAY],
+            ['gender', 'gender', GenderEnum::class, Constants::IS_ENUM],
+            ['genders', 'genders', GenderEnum::class, Constants::IS_ENUM | Constants::IS_ARRAY],
+            ['id', 'id', 'bail|required|Integer', Constants::IS_OPTIONAL],
+            ['ids', 'ids', 'bail|required|Integer', Constants::IS_OPTIONAL | Constants::IS_ARRAY],
         ];
     }
 
     public function responseRules()
     {
         return [
-            ['user', 'user', true, false, UserModel::class, false, false, false],
-            ['users', 'users', true, true, UserModel::class, false, false, false],
+            ['user', 'user', UserModel::class, Constants::IS_MODEL],
+            ['users', 'users', UserModel::class, Constants::IS_MODEL | Constants::IS_ARRAY],
         ];
     }
 
