@@ -2,9 +2,9 @@
 
 namespace App\Generated\V1\Enums;
 
-use YetAnotherGenerator\BaseEnum;
+use YetAnotherGenerator\BOs\Enum;
 
-class PayWayEnum extends BaseEnum
+class PayWayEnum extends Enum
 {
     public const ALIPAY = 'ALIPAY';
 

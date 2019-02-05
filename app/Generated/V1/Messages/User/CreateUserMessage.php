@@ -3,12 +3,12 @@
 namespace App\Generated\V1\Messages\User;
 
 use App\Generated\V1\Models\UserModel;
+use YetAnotherGenerator\Concerns\ValueHelper;
 use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\BaseMessage;
-use YetAnotherGenerator\ValueHelper;
+use YetAnotherGenerator\Http\Messages\Message;
 use App\Generated\V1\Enums\GenderEnum;
 
-class CreateUserMessage extends BaseMessage
+class CreateUserMessage extends Message
 {
     use ValueHelper;
 

@@ -2,11 +2,11 @@
 
 namespace App\Generated\V1\Messages\AdminUser;
 
+use YetAnotherGenerator\Concerns\ValueHelper;
 use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\BaseMessage;
-use YetAnotherGenerator\ValueHelper;
+use YetAnotherGenerator\Http\Messages\Message;
 
-class GetUsersMessage extends BaseMessage
+class GetUsersMessage extends Message
 {
     use ValueHelper;
 

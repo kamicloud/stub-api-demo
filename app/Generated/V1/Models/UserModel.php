@@ -2,11 +2,11 @@
 
 namespace App\Generated\V1\Models;
 
-use YetAnotherGenerator\BaseModel;
+use YetAnotherGenerator\Concerns\ValueHelper;
 use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\ValueHelper;
+use YetAnotherGenerator\DTOs\DTO;
 
-class UserModel extends BaseModel
+class UserModel extends DTO
 {
     use ValueHelper;
 

@@ -2,9 +2,9 @@
 
 namespace App\Generated\V1\Enums;
 
-use YetAnotherGenerator\BaseEnum;
+use YetAnotherGenerator\BOs\Enum;
 
-class UserStatusEnum extends BaseEnum
+class UserStatusEnum extends Enum
 {
     public const DISABLED = 2;
 

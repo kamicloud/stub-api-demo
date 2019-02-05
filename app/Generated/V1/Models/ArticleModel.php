@@ -2,13 +2,13 @@
 
 namespace App\Generated\V1\Models;
 
-use YetAnotherGenerator\BaseModel;
 use App\Generated\V1\Models\UserModel;
+use YetAnotherGenerator\Concerns\ValueHelper;
 use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\ValueHelper;
+use YetAnotherGenerator\DTOs\DTO;
 use App\Generated\V1\Enums\ArticleStatusEnum;
 
-class ArticleModel extends BaseModel
+class ArticleModel extends DTO
 {
     use ValueHelper;
 

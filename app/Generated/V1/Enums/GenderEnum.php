@@ -2,9 +2,9 @@
 
 namespace App\Generated\V1\Enums;
 
-use YetAnotherGenerator\BaseEnum;
+use YetAnotherGenerator\BOs\Enum;
 
-class GenderEnum extends BaseEnum
+class GenderEnum extends Enum
 {
     public const UNKNOWN = 0;
 

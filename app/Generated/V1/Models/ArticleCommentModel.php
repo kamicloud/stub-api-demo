@@ -2,12 +2,12 @@
 
 namespace App\Generated\V1\Models;
 
-use YetAnotherGenerator\BaseModel;
 use App\Generated\V1\Models\UserModel;
+use YetAnotherGenerator\Concerns\ValueHelper;
 use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\ValueHelper;
+use YetAnotherGenerator\DTOs\DTO;
 
-class ArticleCommentModel extends BaseModel
+class ArticleCommentModel extends DTO
 {
     use ValueHelper;
 

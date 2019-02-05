@@ -2,9 +2,9 @@
 
 namespace App\Generated\V1\Enums;
 
-use YetAnotherGenerator\BaseEnum;
+use YetAnotherGenerator\BOs\Enum;
 
-class ToolAllowEnum extends BaseEnum
+class ToolAllowEnum extends Enum
 {
     public const XXX = 0;
 

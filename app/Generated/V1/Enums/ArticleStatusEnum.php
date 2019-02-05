@@ -2,9 +2,9 @@
 
 namespace App\Generated\V1\Enums;
 
-use YetAnotherGenerator\BaseEnum;
+use YetAnotherGenerator\BOs\Enum;
 
-class ArticleStatusEnum extends BaseEnum
+class ArticleStatusEnum extends Enum
 {
     public const UNKNOWN1 = 1;
 

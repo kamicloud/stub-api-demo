@@ -2,9 +2,9 @@
 
 namespace App\Generated\V1\Enums;
 
-use YetAnotherGenerator\BaseEnum;
+use YetAnotherGenerator\BOs\Enum;
 
-class TeacherCatalogEnum extends BaseEnum
+class TeacherCatalogEnum extends Enum
 {
     public const PHH = 0;
 

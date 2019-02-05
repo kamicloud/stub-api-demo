@@ -2,12 +2,12 @@
 
 namespace App\Generated\V1\Messages\Article;
 
+use YetAnotherGenerator\Concerns\ValueHelper;
 use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\BaseMessage;
 use App\Generated\V1\Models\ArticleModel;
-use YetAnotherGenerator\ValueHelper;
+use YetAnotherGenerator\Http\Messages\Message;
 
-class GetArticleMessage extends BaseMessage
+class GetArticleMessage extends Message
 {
     use ValueHelper;
 

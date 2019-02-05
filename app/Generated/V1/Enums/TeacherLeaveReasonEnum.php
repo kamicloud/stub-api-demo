@@ -2,9 +2,9 @@
 
 namespace App\Generated\V1\Enums;
 
-use YetAnotherGenerator\BaseEnum;
+use YetAnotherGenerator\BOs\Enum;
 
-class TeacherLeaveReasonEnum extends BaseEnum
+class TeacherLeaveReasonEnum extends Enum
 {
     public const RELAX = 1;
 

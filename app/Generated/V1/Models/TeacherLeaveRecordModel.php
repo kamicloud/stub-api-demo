@@ -2,12 +2,12 @@
 
 namespace App\Generated\V1\Models;
 
-use YetAnotherGenerator\BaseModel;
+use YetAnotherGenerator\Concerns\ValueHelper;
 use YetAnotherGenerator\Utils\Constants;
 use App\Generated\V1\Enums\TeacherLeaveReasonEnum;
-use YetAnotherGenerator\ValueHelper;
+use YetAnotherGenerator\DTOs\DTO;
 
-class TeacherLeaveRecordModel extends BaseModel
+class TeacherLeaveRecordModel extends DTO
 {
     use ValueHelper;
 
