@@ -10,17 +10,10 @@ class UserModel extends DTO
 {
     use ValueHelper;
 
-    protected $id;
     protected $name;
+    protected $age;
+    protected $id;
     protected $avatar;
-
-    /**
-     * 一个注释
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * 这里只是留了一个备注
@@ -30,19 +23,37 @@ class UserModel extends DTO
         return $this->name;
     }
 
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    /**
+     * 一个注释
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public function getAvatar()
     {
         return $this->avatar;
     }
 
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    public function setAge($age)
+    {
+        $this->age = $age;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     public function setAvatar($avatar)
@@ -53,9 +64,10 @@ class UserModel extends DTO
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', 'bail|required|Integer', Constants::IS_OPTIONAL],
-            ['name', 'name', 'bail|required|String', Constants::IS_OPTIONAL],
-            ['avatar', 'avatar', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['name', 'name', 'bail|String', null],
+            ['age', 'age', 'bail|Integer', null],
+            ['id', 'id', 'bail|Integer', null],
+            ['avatar', 'avatar', 'bail|String', null],
         ];
     }
 

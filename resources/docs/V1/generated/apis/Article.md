@@ -9,6 +9,11 @@
 <a name="CreateArticle"></a>
 ## CreateArticle
 
+`POST`
+
+`/api/v1/article/create_article`
+
+
 > {warning} 添加文章
 
 ### Requests
@@ -20,10 +25,15 @@
 ### Responses
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|article | |`Article`|true|
+|article | |[`Models.Article`](/docs/{{version}}/generated/models#Article)|true|
 
 <a name="GetArticle"></a>
 ## GetArticle
+
+`POST`
+
+`/api/v1/article/get_article`
+
 
 > {warning} 取得一篇文章
 
@@ -35,19 +45,20 @@
 ### Responses
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|article | |`Article`|true|
+|article | |[`Models.Article`](/docs/{{version}}/generated/models#Article)|true|
 
 <a name="GetArticles"></a>
 ## GetArticles
 
-> {warning} 获取文章列表
+`POST`
 
-### Requests
-|Key|Description|Type|Required|
-|:-|:-|:-|:-|
+`/api/v1/article/get_articles`
+
+
+> {warning} 获取文章列表
 
 ### Responses
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|articles | |`Article[]`|true|
+|articles | |[`Models.Article[]`](/docs/{{version}}/generated/models#Article)|true|
 

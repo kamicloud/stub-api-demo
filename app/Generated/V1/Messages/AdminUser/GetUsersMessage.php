@@ -26,8 +26,8 @@ class GetUsersMessage extends Message
     public function requestRules()
     {
         return [
-            ['strings', 'strings', 'bail|required|String', Constants::IS_OPTIONAL | Constants::IS_ARRAY],
-            ['ints', 'ints', 'bail|required|int', Constants::IS_OPTIONAL | Constants::IS_ARRAY],
+            ['strings', 'strings', 'bail|String', Constants::IS_ARRAY],
+            ['ints', 'ints', 'bail|int', Constants::IS_ARRAY],
         ];
     }
 

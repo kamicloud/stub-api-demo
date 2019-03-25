@@ -4,7 +4,7 @@ namespace App\Generated\V1\Enums;
 
 use YetAnotherGenerator\BOs\Enum;
 
-class ToolAllowEnum extends Enum
+class ToolAllow extends Enum
 {
     public const XXX = 0;
 

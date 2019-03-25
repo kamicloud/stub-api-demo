@@ -9,20 +9,21 @@
 <a name="User"></a>
 ## User
 
-> {warning} 用户信息
+> {info} 用户信息
 第二行
 
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|id |一个注释|`Integer`|true|
 |name |这里只是留了一个备注|`String`|true|
+|age | |`Integer`|true|
+|id |一个注释|`Integer`|true|
 |avatar | |`String`|true|
 
 <a name="UserProfile"></a>
 ## UserProfile
 
-> {warning} 用户的基本信息
+> {info} 用户的基本信息
 
 ### Attributes
 |Key|Description|Type|Required|
@@ -33,7 +34,7 @@
 <a name="SharePayload"></a>
 ## SharePayload
 
-> {warning} 一个分享场景的抽象
+> {info} 一个分享场景的抽象
 
 ### Attributes
 |Key|Description|Type|Required|
@@ -51,8 +52,8 @@
 |id | |`Integer`| |
 |title | |`String`|true|
 |content | |`String`| |
-|user | |`User`|true|
-|status | |`ArticleStatus`|true|
+|user | |[`Models.User`](/docs/{{version}}/generated/models#User)|true|
+|status | |[`Enums.ArticleStatus`](/docs/{{version}}/generated/enums#ArticleStatus)|true|
 |commentsCount | |`Integer`| |
 |favorite |需要时用于标记是否收藏|`Boolean`| |
 |hot |是否是添加火热标记|`Boolean`| |
@@ -65,12 +66,12 @@
 |:-|:-|:-|:-|
 |id | |`Integer`|true|
 |tname | |`String`|true|
-|reason | |`TeacherLeaveReason`|true|
+|reason | |[`Enums.TeacherLeaveReason`](/docs/{{version}}/generated/enums#TeacherLeaveReason)|true|
 
 <a name="Teacher"></a>
 ## Teacher
 
-> {warning} 模拟一个老师的信息
+> {info} 模拟一个老师的信息
 
 ### Attributes
 |Key|Description|Type|Required|
@@ -79,8 +80,8 @@
 |nickname | |`String`|true|
 |pic | |`String`|true|
 |marks | |`int[]`|true|
-|catalog | |`TeacherCatalog`|true|
-|teachers | |`Teacher[]`|true|
+|catalog | |[`Enums.TeacherCatalog`](/docs/{{version}}/generated/enums#TeacherCatalog)|true|
+|teachers | |[`Models.Teacher[]`](/docs/{{version}}/generated/models#Teacher)|true|
 |goodCmtRate |好评率，以1为单位|`float`|true|
 |isMyFave | |`boolean`|true|
 |openClass | |`int[]`|true|
@@ -95,7 +96,7 @@
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
 |id | |`Integer`|true|
-|user | |`User`|true|
+|user | |[`Models.User`](/docs/{{version}}/generated/models#User)|true|
 |content | |`String`|true|
 |createdAt | |`Date`|true|
 

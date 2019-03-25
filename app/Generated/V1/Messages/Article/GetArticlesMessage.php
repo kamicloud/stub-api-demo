@@ -22,7 +22,7 @@ class GetArticlesMessage extends Message
     public function responseRules()
     {
         return [
-            ['articles', 'articles', ArticleModel::class, Constants::IS_MODEL | Constants::IS_ARRAY],
+            ['articles', 'articles', ArticleModel::class, Constants::IS_ARRAY | Constants::IS_MODEL],
         ];
     }
 

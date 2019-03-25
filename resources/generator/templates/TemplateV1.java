@@ -111,7 +111,7 @@ class TemplateV1 {
             /**
              * 一个注释
              */
-            @DBField(name = "id")
+            @DBField("id")
             @Mutable
             Integer id;
             /**
@@ -136,7 +136,7 @@ class TemplateV1 {
          * 模拟一个老师的信息
          */
         class Teacher {
-            @DBField(name = "id")
+            @DBField("id")
             int teacherId;
             String nickname;
             String pic;
@@ -254,7 +254,7 @@ class TemplateV1 {
          * 多行文本
          */
         public class AdminUser {
-            @API(methods = {MethodType.POST})
+            @Methods({MethodType.POST})
             class GetUsers {
                 @Request
                 String[] strings;
@@ -267,7 +267,7 @@ class TemplateV1 {
          * 用户控制器
          */
         public class User {
-            @API(methods = {MethodType.POST, MethodType.DELETE})
+            @Methods({MethodType.POST, MethodType.DELETE})
             // @Middleware("某一个小范围的middleware")
             class GetUsers {
                 /**
@@ -298,7 +298,7 @@ class TemplateV1 {
                 Models.User user;
             }
 
-            @API(methods = {MethodType.POST})
+            @Methods({MethodType.POST})
             class CreateUser {
                 /**
                  * 查询的ID

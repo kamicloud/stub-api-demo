@@ -17,6 +17,20 @@
               "mode": "formdata",
               "formdata": [
                 {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
                   "key": "email",
                   "value": "",
                   "type": "text",
@@ -60,6 +74,20 @@
                 }
               ],
               "urlencoded": [
+                {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
                 {
                   "key": "email",
                   "value": "",
@@ -111,9 +139,9 @@
               ],
               "path": [
                 "api",
-                "V1",
-                "User",
-                "CreateUser"
+                "v1",
+                "user",
+                "create_user"
               ]
             }
           }
@@ -127,6 +155,20 @@
               "mode": "formdata",
               "formdata": [
                 {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
                   "key": "id",
                   "value": "",
                   "type": "text",
@@ -163,6 +205,20 @@
                 }
               ],
               "urlencoded": [
+                {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
                 {
                   "key": "id",
                   "value": "",
@@ -207,9 +263,9 @@
               ],
               "path": [
                 "api",
-                "V1",
-                "User",
-                "GetUsers"
+                "v1",
+                "user",
+                "get_users"
               ]
             }
           }
@@ -228,6 +284,20 @@
               "mode": "formdata",
               "formdata": [
                 {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
                   "key": "strings",
                   "value": "",
                   "type": "text",
@@ -243,6 +313,20 @@
                 }
               ],
               "urlencoded": [
+                {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
                 {
                   "key": "strings",
                   "value": "",
@@ -266,9 +350,9 @@
               ],
               "path": [
                 "api",
-                "V1",
-                "AdminUser",
-                "GetUsers"
+                "v1",
+                "admin_user",
+                "get_users"
               ]
             }
           }
@@ -287,6 +371,20 @@
               "mode": "formdata",
               "formdata": [
                 {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
                   "key": "title",
                   "value": "",
                   "type": "text",
@@ -302,6 +400,20 @@
                 }
               ],
               "urlencoded": [
+                {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
                 {
                   "key": "title",
                   "value": "",
@@ -325,9 +437,9 @@
               ],
               "path": [
                 "api",
-                "V1",
-                "Article",
-                "CreateArticle"
+                "v1",
+                "article",
+                "create_article"
               ]
             },
             "description": "添加文章"
@@ -342,6 +454,20 @@
               "mode": "formdata",
               "formdata": [
                 {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
                   "key": "id",
                   "value": "",
                   "type": "text",
@@ -350,6 +476,20 @@
                 }
               ],
               "urlencoded": [
+                {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
                 {
                   "key": "id",
                   "value": "",
@@ -366,9 +506,9 @@
               ],
               "path": [
                 "api",
-                "V1",
-                "Article",
-                "GetArticle"
+                "v1",
+                "article",
+                "get_article"
               ]
             },
             "description": "取得一篇文章"
@@ -381,8 +521,38 @@
             "header": [],
             "body": {
               "mode": "formdata",
-              "formdata": [],
-              "urlencoded": []
+              "formdata": [
+                {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                }
+              ],
+              "urlencoded": [
+                {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                }
+              ]
             },
             "url": {
               "protocol": "http",
@@ -391,9 +561,9 @@
               ],
               "path": [
                 "api",
-                "V1",
-                "Article",
-                "GetArticles"
+                "v1",
+                "article",
+                "get_articles"
               ]
             },
             "description": "获取文章列表"

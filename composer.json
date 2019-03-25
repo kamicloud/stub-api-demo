@@ -34,7 +34,8 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "secure-http": false
     },
     "extra": {
         "laravel": {
@@ -75,8 +76,8 @@
             "url": "https://packagist.phpcomposer.com"
         },
         {
-            "type": "path",
-            "url": "C:\\Users\\Ttdnts\\IdeaProjects\\APIGenerator"
+            "type": "vcs",
+            "url": "https://github.com/Kamicloud/api-generator.git"
         }
     ]
 }

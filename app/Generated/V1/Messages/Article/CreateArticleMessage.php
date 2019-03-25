@@ -28,8 +28,8 @@ class CreateArticleMessage extends Message
     public function requestRules()
     {
         return [
-            ['title', 'title', 'bail|required|String', Constants::IS_OPTIONAL],
-            ['content', 'content', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['title', 'title', 'bail|String', null],
+            ['content', 'content', 'bail|String', null],
         ];
     }
 

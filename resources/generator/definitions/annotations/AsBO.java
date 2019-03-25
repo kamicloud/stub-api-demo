@@ -4,7 +4,5 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Extendable
-public @interface Middleware {
-    String[] value() default "";
+public @interface AsBO {
 }

@@ -36,8 +36,8 @@ class UserProfileModel extends DTO
     public function getAttributeMap()
     {
         return [
-            ['name', 'name', 'bail|required|String', Constants::IS_OPTIONAL],
-            ['age', 'age', 'bail|required|Integer', Constants::IS_OPTIONAL],
+            ['name', 'name', 'bail|String', null],
+            ['age', 'age', 'bail|Integer', null],
         ];
     }
 

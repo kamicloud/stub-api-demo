@@ -59,9 +59,9 @@ class ArticleCommentModel extends DTO
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', 'bail|required|Integer', Constants::IS_OPTIONAL],
+            ['id', 'id', 'bail|Integer', null],
             ['user', 'user', UserModel::class, Constants::IS_MODEL],
-            ['content', 'content', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['content', 'content', 'bail|String', null],
             ['createdAt', 'created_at', 'Date', null],
         ];
     }

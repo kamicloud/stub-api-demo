@@ -2,8 +2,8 @@
 ## ArticleStatus
 |Key|Value|Description|
 |:-|:-|:-|
-|UNKNOWN1|1| |
 |UNKNOWN|0| |
+|UNKNOWN1|1| |
 <a name="Gender"></a>
 ## Gender
 |Key|Value|Description|
@@ -14,7 +14,7 @@
 <a name="ToolAllow"></a>
 ## ToolAllow
 
-> {warning} 上课工具枚举
+> {info} 上课工具枚举
 
 |Key|Value|Description|
 |:-|:-|:-|
@@ -22,7 +22,7 @@
 <a name="TeacherCatalog"></a>
 ## TeacherCatalog
 
-> {warning} 教师类型
+> {info} 教师类型
 
 |Key|Value|Description|
 |:-|:-|:-|
@@ -33,27 +33,27 @@
 ## PayWay
 |Key|Value|Description|
 |:-|:-|:-|
-|ALIPAY|1| |
 |WECHAT|0| |
+|ALIPAY|1| |
 <a name="UserStatus"></a>
 ## UserStatus
 
-> {warning} 用户状态
+> {info} 用户状态
 
 |Key|Value|Description|
 |:-|:-|:-|
-|DISABLED|2| |
 |INIT|0| |
+|DISABLED|2| |
 |IN_CLASS|4| |
 <a name="TeacherLeaveReason"></a>
 ## TeacherLeaveReason
 
-> {warning} 教师请假原因
+> {info} 教师请假原因
 详细的看代码吧
 
 |Key|Value|Description|
 |:-|:-|:-|
-|RELAX|1| |
 |EVENT|0| |
+|RELAX|1| |
 |ACTIVITY|2| |
 

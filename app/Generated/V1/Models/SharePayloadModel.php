@@ -70,10 +70,10 @@ class SharePayloadModel extends DTO
     public function getAttributeMap()
     {
         return [
-            ['title', 'title', 'bail|required|String', Constants::IS_OPTIONAL],
-            ['description', 'description', 'bail|required|String', Constants::IS_OPTIONAL],
-            ['icon', 'icon', 'bail|required|String', Constants::IS_OPTIONAL],
-            ['url', 'url', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['title', 'title', 'bail|String', null],
+            ['description', 'description', 'bail|String', null],
+            ['icon', 'icon', 'bail|String', null],
+            ['url', 'url', 'bail|String', null],
         ];
     }
 

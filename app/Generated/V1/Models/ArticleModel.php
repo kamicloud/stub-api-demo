@@ -6,7 +6,7 @@ use App\Generated\V1\Models\UserModel;
 use YetAnotherGenerator\Concerns\ValueHelper;
 use YetAnotherGenerator\Utils\Constants;
 use YetAnotherGenerator\DTOs\DTO;
-use App\Generated\V1\Enums\ArticleStatusEnum;
+use App\Generated\V1\Enums\ArticleStatus;
 
 class ArticleModel extends DTO
 {
@@ -121,14 +121,14 @@ class ArticleModel extends DTO
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', 'bail|nullable|Integer', null],
-            ['title', 'title', 'bail|required|String', Constants::IS_OPTIONAL],
-            ['content', 'content', 'bail|nullable|String', null],
+            ['id', 'id', 'nullable|bail|Integer', Constants::IS_OPTIONAL],
+            ['title', 'title', 'bail|String', null],
+            ['content', 'content', 'nullable|bail|String', Constants::IS_OPTIONAL],
             ['user', 'user', UserModel::class, Constants::IS_MODEL],
-            ['status', 'status', ArticleStatusEnum::class, Constants::IS_ENUM],
-            ['commentsCount', 'comments_count', 'bail|nullable|Integer', null],
-            ['favorite', 'favorite', 'bail|nullable|Boolean', null],
-            ['hot', 'hot', 'bail|nullable|Boolean', null],
+            ['status', 'status', ArticleStatus::class, Constants::IS_ENUM],
+            ['commentsCount', 'comments_count', 'nullable|bail|Integer', Constants::IS_OPTIONAL],
+            ['favorite', 'favorite', 'nullable|bail|Boolean', Constants::IS_OPTIONAL],
+            ['hot', 'hot', 'nullable|bail|Boolean', Constants::IS_OPTIONAL],
             ['createdAt', 'created_at', 'Date', null],
         ];
     }

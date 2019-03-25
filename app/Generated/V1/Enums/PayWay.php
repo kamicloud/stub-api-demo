@@ -4,15 +4,15 @@ namespace App\Generated\V1\Enums;
 
 use YetAnotherGenerator\BOs\Enum;
 
-class PayWayEnum extends Enum
+class PayWay extends Enum
 {
-    public const ALIPAY = 'ALIPAY';
-
     public const WECHAT = 'WECHAT';
 
+    public const ALIPAY = 'ALIPAY';
+
     public const _MAP = [
-        self::ALIPAY => 'ALIPAY',
         self::WECHAT => 'WECHAT',
+        self::ALIPAY => 'ALIPAY',
     ];
 
 }

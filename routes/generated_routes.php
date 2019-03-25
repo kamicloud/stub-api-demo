@@ -1,7 +1,8 @@
 <?php
-Route::post('/V1/User/CreateUser', 'V1\UserController@CreateUser');
-Route::post('/V1/User/GetUsers', 'V1\UserController@GetUsers');
-Route::post('/V1/AdminUser/GetUsers', 'V1\AdminUserController@GetUsers');
-Route::post('/V1/Article/CreateArticle', 'V1\ArticleController@CreateArticle');
-Route::post('/V1/Article/GetArticle', 'V1\ArticleController@GetArticle');
-Route::post('/V1/Article/GetArticles', 'V1\ArticleController@GetArticles');
+
+Route::match(['POST', 'POST'], '/v1/user/create_user', 'V1\UserController@CreateUser');
+Route::match(['POST', 'DELETE', 'POST'], '/v1/user/get_users', 'V1\UserController@GetUsers');
+Route::match(['POST', 'POST'], '/v1/admin_user/get_users', 'V1\AdminUserController@GetUsers');
+Route::match(['POST'], '/v1/article/create_article', 'V1\ArticleController@CreateArticle');
+Route::match(['POST'], '/v1/article/get_article', 'V1\ArticleController@GetArticle');
+Route::match(['POST'], '/v1/article/get_articles', 'V1\ArticleController@GetArticles');

@@ -2,11 +2,11 @@
 
 namespace App\Generated\V1\Messages\User;
 
+use App\Generated\V1\Enums\Gender;
 use App\Generated\V1\Models\UserModel;
 use YetAnotherGenerator\Concerns\ValueHelper;
 use YetAnotherGenerator\Utils\Constants;
 use YetAnotherGenerator\Http\Messages\Message;
-use App\Generated\V1\Enums\GenderEnum;
 
 class GetUsersMessage extends Message
 {
@@ -51,18 +51,18 @@ class GetUsersMessage extends Message
     public function requestRules()
     {
         return [
-            ['id', 'id', 'bail|required|Integer', Constants::IS_OPTIONAL],
-            ['gender', 'gender', GenderEnum::class, Constants::IS_ENUM],
-            ['page', 'page', 'bail|nullable|Integer', null],
-            ['testUser', 'test_user', UserModel::class, Constants::IS_MODEL],
-            ['testUsers', 'test_users', UserModel::class, Constants::IS_MODEL | Constants::IS_ARRAY],
+            ['id', 'id', 'bail|Integer', null],
+            ['gender', 'gender', Gender::class, Constants::IS_ENUM],
+            ['page', 'page', 'nullable|bail|Integer', Constants::IS_OPTIONAL],
+            ['testUser', 'testUser', UserModel::class, Constants::IS_OPTIONAL | Constants::IS_MODEL],
+            ['testUsers', 'testUsers', UserModel::class, Constants::IS_OPTIONAL | Constants::IS_ARRAY | Constants::IS_MODEL],
         ];
     }
 
     public function responseRules()
     {
         return [
-            ['val', 'val', 'bail|required|String', Constants::IS_OPTIONAL],
+            ['val', 'val', 'bail|String', null],
             ['user', 'user', UserModel::class, Constants::IS_MODEL],
         ];
     }

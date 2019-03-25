@@ -4,7 +4,7 @@ namespace App\Generated\V1\Models;
 
 use YetAnotherGenerator\Concerns\ValueHelper;
 use YetAnotherGenerator\Utils\Constants;
-use App\Generated\V1\Enums\TeacherLeaveReasonEnum;
+use App\Generated\V1\Enums\TeacherLeaveReason;
 use YetAnotherGenerator\DTOs\DTO;
 
 class TeacherLeaveRecordModel extends DTO
@@ -48,9 +48,9 @@ class TeacherLeaveRecordModel extends DTO
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', 'bail|required|Integer', Constants::IS_OPTIONAL],
-            ['tname', 'tname', 'bail|required|String', Constants::IS_OPTIONAL],
-            ['reason', 'reason', TeacherLeaveReasonEnum::class, Constants::IS_ENUM],
+            ['id', 'id', 'bail|Integer', null],
+            ['tname', 'tname', 'bail|String', null],
+            ['reason', 'reason', TeacherLeaveReason::class, Constants::IS_ENUM],
         ];
     }
 

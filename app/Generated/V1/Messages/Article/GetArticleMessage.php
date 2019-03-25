@@ -22,7 +22,7 @@ class GetArticleMessage extends Message
     public function requestRules()
     {
         return [
-            ['id', 'id', 'bail|required|Integer', Constants::IS_OPTIONAL],
+            ['id', 'id', 'bail|Integer', null],
         ];
     }
 

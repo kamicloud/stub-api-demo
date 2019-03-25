@@ -4,7 +4,7 @@ namespace App\Generated\V1\Models;
 
 use YetAnotherGenerator\Concerns\ValueHelper;
 use YetAnotherGenerator\Utils\Constants;
-use App\Generated\V1\Enums\TeacherCatalogEnum;
+use App\Generated\V1\Enums\TeacherCatalog;
 use YetAnotherGenerator\DTOs\DTO;
 
 class TeacherModel extends DTO
@@ -161,19 +161,19 @@ class TeacherModel extends DTO
     public function getAttributeMap()
     {
         return [
-            ['teacherId', 'teacher_id', 'bail|required|int', Constants::IS_OPTIONAL],
-            ['nickname', 'nickname', 'bail|required|String', Constants::IS_OPTIONAL],
-            ['pic', 'pic', 'bail|required|String', Constants::IS_OPTIONAL],
-            ['marks', 'marks', 'bail|required|int', Constants::IS_OPTIONAL | Constants::IS_ARRAY],
-            ['catalog', 'catalog', TeacherCatalogEnum::class, Constants::IS_ENUM],
-            ['teachers', 'teachers', TeacherModel::class, Constants::IS_MODEL | Constants::IS_ARRAY],
-            ['goodCmtRate', 'good_cmt_rate', 'bail|required|numeric', Constants::IS_OPTIONAL],
-            ['isMyFave', 'is_my_fave', 'bail|required|boolean', Constants::IS_OPTIONAL],
-            ['openClass', 'open_class', 'bail|required|int', Constants::IS_OPTIONAL | Constants::IS_ARRAY],
-            ['okClass', 'ok_class', 'bail|required|int', Constants::IS_OPTIONAL],
-            ['classNum', 'class_num', 'bail|required|int', Constants::IS_OPTIONAL],
+            ['teacherId', 'id', 'bail|int', null],
+            ['nickname', 'nickname', 'bail|String', null],
+            ['pic', 'pic', 'bail|String', null],
+            ['marks', 'marks', 'bail|int', Constants::IS_ARRAY],
+            ['catalog', 'catalog', TeacherCatalog::class, Constants::IS_ENUM],
+            ['teachers', 'teachers', TeacherModel::class, Constants::IS_ARRAY | Constants::IS_MODEL],
+            ['goodCmtRate', 'good_cmt_rate', 'bail|numeric', null],
+            ['isMyFave', 'is_my_fave', 'bail|boolean', null],
+            ['openClass', 'open_class', 'bail|int', Constants::IS_ARRAY],
+            ['okClass', 'ok_class', 'bail|int', null],
+            ['classNum', 'class_num', 'bail|int', null],
             ['sortTchTime', 'sort_tch_time', 'Date', null],
-            ['isRecommended', 'is_recommended', 'bail|required|boolean', Constants::IS_OPTIONAL],
+            ['isRecommended', 'is_recommended', 'bail|boolean', null],
         ];
     }
 

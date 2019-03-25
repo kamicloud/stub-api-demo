@@ -2,7 +2,6 @@ package definitions.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
 
 /**
  * 设计上用来表示枚举类型是字符串
@@ -11,5 +10,4 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 public @interface StringEnum {
-    String name = "StringEnum";
 }
