@@ -11,16 +11,10 @@ class UserProfileModel extends DTO
     use ValueHelper;
 
     protected $name;
-    protected $age;
 
     public function getName()
     {
         return $this->name;
-    }
-
-    public function getAge()
-    {
-        return $this->age;
     }
 
     public function setName($name)
@@ -28,16 +22,10 @@ class UserProfileModel extends DTO
         $this->name = $name;
     }
 
-    public function setAge($age)
-    {
-        $this->age = $age;
-    }
-
     public function getAttributeMap()
     {
         return [
             ['name', 'name', 'bail|String', null],
-            ['age', 'age', 'bail|Integer', null],
         ];
     }
 

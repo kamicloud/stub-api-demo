@@ -48,7 +48,7 @@ class TeacherLeaveRecordModel extends DTO
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', 'bail|Integer', null],
+            ['id', 'id', 'bail|Integer', Constants::IS_MUTABLE],
             ['tname', 'tname', 'bail|String', null],
             ['reason', 'reason', TeacherLeaveReason::class, Constants::IS_ENUM],
         ];

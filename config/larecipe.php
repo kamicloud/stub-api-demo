@@ -32,9 +32,10 @@ return [
     */
 
     'versions'      => [
-        'default'   => '1.0',
+        'default'   => 'V1',
         'published' => [
-            '1.0'
+            'ErrorCodes',
+            'V1',
         ]
     ],
 
@@ -47,11 +48,20 @@ return [
     | where you can limit the access to only authenticated users in your
     | system. It is false initially so that guests can view your docs.
     |
+    | You may also specify links to show under the auth dropdown menu.
+    | Logout link will show by default.
+    |
     |
     */
 
     'settings' => [
         'auth'  => false,
+        'auth_links' => [
+            [
+                'name' => '',
+                'url' => '',
+            ],
+        ],
         'ga_id' => ''
     ],
 
@@ -70,7 +80,7 @@ return [
 
     'cache'       => [
         'enabled' => false,
-        'period'  => 5
+        'period'  => 300
     ],
 
     /*
@@ -82,7 +92,7 @@ return [
     | You can choose the default engine of your search from the list
     | However, you can also enable/disable the search's visibility
     |
-    | Supported Search Engines: 'algolia'
+    | Supported Search Engines: 'algolia', 'internal'
     |
     */
 
@@ -90,6 +100,9 @@ return [
         'enabled'       => false,
         'default'       => 'algolia',
         'engines'       => [
+            'internal'  => [
+                'index' => ['h2', 'h3']
+            ],
             'algolia'   => [
                 'key'   => '',
                 'index' => ''
@@ -178,7 +191,7 @@ return [
    | Forum
    |--------------------------------------------------------------------------
    |
-   | Giving a chance to your users to post thier questions or feedback
+   | Giving a chance to your users to post their questions or feedback
    | directly on your docs, is pretty nice way to engage them more.
    | However, you can also enable/disable the forum's visibility.
    |
@@ -186,7 +199,7 @@ return [
    |
    */
 
-    'forum'                 => [
+  'forum'                 => [
         'enabled'           => false,
         'default'           => 'disqus',
         'services'          => [

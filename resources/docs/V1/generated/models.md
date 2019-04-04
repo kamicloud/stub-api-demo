@@ -9,32 +9,30 @@
 <a name="User"></a>
 ## User
 
-> {info} 用户信息
+> {warning} 用户信息
 第二行
 
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
 |name |这里只是留了一个备注|`String`|true|
-|age | |`Integer`|true|
 |id |一个注释|`Integer`|true|
 |avatar | |`String`|true|
 
 <a name="UserProfile"></a>
 ## UserProfile
 
-> {info} 用户的基本信息
+> {warning} 用户的基本信息
 
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
 |name | |`String`|true|
-|age | |`Integer`|true|
 
 <a name="SharePayload"></a>
 ## SharePayload
 
-> {info} 一个分享场景的抽象
+> {warning} 一个分享场景的抽象
 
 ### Attributes
 |Key|Description|Type|Required|
@@ -71,7 +69,7 @@
 <a name="Teacher"></a>
 ## Teacher
 
-> {info} 模拟一个老师的信息
+> {warning} 模拟一个老师的信息
 
 ### Attributes
 |Key|Description|Type|Required|

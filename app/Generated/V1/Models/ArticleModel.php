@@ -121,7 +121,7 @@ class ArticleModel extends DTO
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', 'nullable|bail|Integer', Constants::IS_OPTIONAL],
+            ['id', 'id', 'nullable|bail|Integer', Constants::IS_OPTIONAL | Constants::IS_MUTABLE],
             ['title', 'title', 'bail|String', null],
             ['content', 'content', 'nullable|bail|String', Constants::IS_OPTIONAL],
             ['user', 'user', UserModel::class, Constants::IS_MODEL],

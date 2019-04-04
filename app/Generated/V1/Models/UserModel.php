@@ -11,7 +11,6 @@ class UserModel extends DTO
     use ValueHelper;
 
     protected $name;
-    protected $age;
     protected $id;
     protected $avatar;
 
@@ -21,11 +20,6 @@ class UserModel extends DTO
     public function getName()
     {
         return $this->name;
-    }
-
-    public function getAge()
-    {
-        return $this->age;
     }
 
     /**
@@ -46,11 +40,6 @@ class UserModel extends DTO
         $this->name = $name;
     }
 
-    public function setAge($age)
-    {
-        $this->age = $age;
-    }
-
     public function setId($id)
     {
         $this->id = $id;
@@ -65,8 +54,7 @@ class UserModel extends DTO
     {
         return [
             ['name', 'name', 'bail|String', null],
-            ['age', 'age', 'bail|Integer', null],
-            ['id', 'id', 'bail|Integer', null],
+            ['id', 'id', 'bail|Integer', Constants::IS_MUTABLE],
             ['avatar', 'avatar', 'bail|String', null],
         ];
     }

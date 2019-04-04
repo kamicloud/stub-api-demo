@@ -1,8 +1,13 @@
----
-api: /api/V1/User/GetUsers
-id:
-gender:
-page:
-testUser:
-testUsers:
----
+# __api: /api/api/v1/user/get_users
+__enabled: true
+__role:
+__user:
+__anchor:
+__params:
+  id:
+  gender:
+  page:
+  testUser:
+  testUsers:
+# __testcases:
+

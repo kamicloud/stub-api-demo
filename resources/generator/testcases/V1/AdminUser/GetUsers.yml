@@ -1,5 +1,10 @@
----
-api: /api/V1/AdminUser/GetUsers
-strings:
-ints:
----
+# __api: /api/api/v1/admin_user/get_users
+__enabled: false
+__role:
+__user:
+__anchor:
+__params:
+  strings:
+  ints:
+# __testcases:
+

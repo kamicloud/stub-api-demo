@@ -128,8 +128,8 @@ class TemplateV1 {
         class UserProfile {
             @DBField
             String name;
-            @DBField
-            Integer age;
+            // @DBField
+            // Integer age;
         }
 
         /**

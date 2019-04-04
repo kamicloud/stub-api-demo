@@ -1,9 +1,14 @@
----
-api: /api/V1/User/CreateUser
-email:
-emails:
-gender:
-genders:
-id:
-ids:
----
+# __api: /api/api/v1/user/create_user
+__enabled: false
+__role:
+__user:
+__anchor:
+__params:
+  email:
+  emails:
+  gender:
+  genders:
+  id:
+  ids:
+# __testcases:
+

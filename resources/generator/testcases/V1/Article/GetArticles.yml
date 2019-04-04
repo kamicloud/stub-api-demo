@@ -1,3 +1,8 @@
----
-api: /api/V1/Article/GetArticles
----
+# __api: /api/api/v1/article/get_articles
+__enabled: true
+__role:
+__user:
+__anchor:
+__params:
+# __testcases:
+

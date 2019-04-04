@@ -14,7 +14,7 @@
 <a name="ToolAllow"></a>
 ## ToolAllow
 
-> {info} 上课工具枚举
+> {warning} 上课工具枚举
 
 |Key|Value|Description|
 |:-|:-|:-|
@@ -22,7 +22,7 @@
 <a name="TeacherCatalog"></a>
 ## TeacherCatalog
 
-> {info} 教师类型
+> {warning} 教师类型
 
 |Key|Value|Description|
 |:-|:-|:-|
@@ -33,12 +33,12 @@
 ## PayWay
 |Key|Value|Description|
 |:-|:-|:-|
-|WECHAT|0| |
-|ALIPAY|1| |
+|WECHAT|WECHAT| |
+|ALIPAY|ALIPAY| |
 <a name="UserStatus"></a>
 ## UserStatus
 
-> {info} 用户状态
+> {warning} 用户状态
 
 |Key|Value|Description|
 |:-|:-|:-|
@@ -48,7 +48,7 @@
 <a name="TeacherLeaveReason"></a>
 ## TeacherLeaveReason
 
-> {info} 教师请假原因
+> {warning} 教师请假原因
 详细的看代码吧
 
 |Key|Value|Description|
