@@ -1,0 +1,6 @@
+*
+!.gitignore
+!config
+!definions
+!templates
+!testcases
