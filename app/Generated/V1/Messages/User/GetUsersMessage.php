@@ -3,10 +3,10 @@
 namespace App\Generated\V1\Messages\User;
 
 use App\Generated\V1\Enums\Gender;
-use App\Generated\V1\Models\UserModel;
-use YetAnotherGenerator\Concerns\ValueHelper;
-use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\Http\Messages\Message;
+use Kamicloud\StubApi\Concerns\ValueHelper;
+use App\Generated\V1\Models\UserDTO;
+use Kamicloud\StubApi\Http\Messages\Message;
+use Kamicloud\StubApi\Utils\Constants;
 
 class GetUsersMessage extends Message
 {
@@ -54,8 +54,8 @@ class GetUsersMessage extends Message
             ['id', 'id', 'bail|Integer', null],
             ['gender', 'gender', Gender::class, Constants::IS_ENUM],
             ['page', 'page', 'nullable|bail|Integer', Constants::IS_OPTIONAL],
-            ['testUser', 'testUser', UserModel::class, Constants::IS_OPTIONAL | Constants::IS_MODEL],
-            ['testUsers', 'testUsers', UserModel::class, Constants::IS_OPTIONAL | Constants::IS_ARRAY | Constants::IS_MODEL],
+            ['testUser', 'testUser', UserDTO::class, Constants::IS_OPTIONAL | Constants::IS_MODEL],
+            ['testUsers', 'testUsers', UserDTO::class, Constants::IS_OPTIONAL | Constants::IS_ARRAY | Constants::IS_MODEL],
         ];
     }
 
@@ -63,7 +63,7 @@ class GetUsersMessage extends Message
     {
         return [
             ['val', 'val', 'bail|String', null],
-            ['user', 'user', UserModel::class, Constants::IS_MODEL],
+            ['user', 'user', UserDTO::class, Constants::IS_MODEL],
         ];
     }
 

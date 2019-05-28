@@ -2,10 +2,10 @@
 
 namespace App\Generated\V1\Messages\Article;
 
-use YetAnotherGenerator\Concerns\ValueHelper;
-use YetAnotherGenerator\Utils\Constants;
-use App\Generated\V1\Models\ArticleModel;
-use YetAnotherGenerator\Http\Messages\Message;
+use Kamicloud\StubApi\Concerns\ValueHelper;
+use Kamicloud\StubApi\Http\Messages\Message;
+use Kamicloud\StubApi\Utils\Constants;
+use App\Generated\V1\Models\ArticleDTO;
 
 class CreateArticleMessage extends Message
 {
@@ -36,7 +36,7 @@ class CreateArticleMessage extends Message
     public function responseRules()
     {
         return [
-            ['article', 'article', ArticleModel::class, Constants::IS_MODEL],
+            ['article', 'article', ArticleDTO::class, Constants::IS_MODEL],
         ];
     }
 

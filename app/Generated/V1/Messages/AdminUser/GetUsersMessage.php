@@ -2,9 +2,9 @@
 
 namespace App\Generated\V1\Messages\AdminUser;
 
-use YetAnotherGenerator\Concerns\ValueHelper;
-use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\Http\Messages\Message;
+use Kamicloud\StubApi\Concerns\ValueHelper;
+use Kamicloud\StubApi\Http\Messages\Message;
+use Kamicloud\StubApi\Utils\Constants;
 
 class GetUsersMessage extends Message
 {

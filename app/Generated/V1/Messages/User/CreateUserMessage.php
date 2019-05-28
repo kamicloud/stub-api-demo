@@ -3,10 +3,10 @@
 namespace App\Generated\V1\Messages\User;
 
 use App\Generated\V1\Enums\Gender;
-use App\Generated\V1\Models\UserModel;
-use YetAnotherGenerator\Concerns\ValueHelper;
-use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\Http\Messages\Message;
+use Kamicloud\StubApi\Concerns\ValueHelper;
+use App\Generated\V1\Models\UserDTO;
+use Kamicloud\StubApi\Http\Messages\Message;
+use Kamicloud\StubApi\Utils\Constants;
 
 class CreateUserMessage extends Message
 {
@@ -69,8 +69,8 @@ class CreateUserMessage extends Message
     public function responseRules()
     {
         return [
-            ['user', 'user', UserModel::class, Constants::IS_MODEL],
-            ['users', 'users', UserModel::class, Constants::IS_ARRAY | Constants::IS_MODEL],
+            ['user', 'user', UserDTO::class, Constants::IS_MODEL],
+            ['users', 'users', UserDTO::class, Constants::IS_ARRAY | Constants::IS_MODEL],
         ];
     }
 

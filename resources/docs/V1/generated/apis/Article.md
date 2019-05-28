@@ -2,9 +2,9 @@
 
 ---
 
-  - [CreateArticle](#CreateArticle)
-  - [GetArticle](#GetArticle)
-  - [GetArticles](#GetArticles)
+  - [CreateArticle添加文章](#CreateArticle)
+  - [GetArticle取得一篇文章](#GetArticle)
+  - [GetArticles获取文章列表](#GetArticles)
 
 <a name="CreateArticle"></a>
 ## CreateArticle

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Generated\V1\Models;
+namespace App\Generated\V1\DTOs;
 
-use App\Generated\V1\Models\UserModel;
-use YetAnotherGenerator\Concerns\ValueHelper;
-use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\DTOs\DTO;
+use Kamicloud\StubApi\Concerns\ValueHelper;
+use App\Generated\V1\Models\UserDTO;
+use Kamicloud\StubApi\DTOs\DTO;
+use Kamicloud\StubApi\Utils\Constants;
 
-class ArticleCommentModel extends DTO
+class ArticleCommentDTO extends DTO
 {
     use ValueHelper;
 
@@ -60,7 +60,7 @@ class ArticleCommentModel extends DTO
     {
         return [
             ['id', 'id', 'bail|Integer', null],
-            ['user', 'user', UserModel::class, Constants::IS_MODEL],
+            ['user', 'user', UserDTO::class, Constants::IS_MODEL],
             ['content', 'content', 'bail|String', null],
             ['createdAt', 'created_at', 'Date', null],
         ];

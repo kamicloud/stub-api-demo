@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Generated\V1\Models;
+namespace App\Generated\V1\DTOs;
 
-use App\Generated\V1\Models\UserModel;
-use YetAnotherGenerator\Concerns\ValueHelper;
-use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\DTOs\DTO;
+use Kamicloud\StubApi\Concerns\ValueHelper;
+use App\Generated\V1\Models\UserDTO;
+use Kamicloud\StubApi\DTOs\DTO;
+use Kamicloud\StubApi\Utils\Constants;
 use App\Generated\V1\Enums\ArticleStatus;
 
-class ArticleModel extends DTO
+class ArticleDTO extends DTO
 {
     use ValueHelper;
 
@@ -124,7 +124,7 @@ class ArticleModel extends DTO
             ['id', 'id', 'nullable|bail|Integer', Constants::IS_OPTIONAL | Constants::IS_MUTABLE],
             ['title', 'title', 'bail|String', null],
             ['content', 'content', 'nullable|bail|String', Constants::IS_OPTIONAL],
-            ['user', 'user', UserModel::class, Constants::IS_MODEL],
+            ['user', 'user', UserDTO::class, Constants::IS_MODEL],
             ['status', 'status', ArticleStatus::class, Constants::IS_ENUM],
             ['commentsCount', 'comments_count', 'nullable|bail|Integer', Constants::IS_OPTIONAL],
             ['favorite', 'favorite', 'nullable|bail|Boolean', Constants::IS_OPTIONAL],

@@ -6,25 +6,29 @@ use App\Generated\V1\Messages\User\GetUsersMessage;
 use App\Generated\V1\Messages\User\CreateUserMessage;
 use App\Http\Controllers\Controller;
 use App\Http\Services\V1\UserService;
-use Illuminate\Http\Request;
 use DB;
 
 class UserController extends Controller
 {
-    public function createUser(Request $request)
+    public $service;
+
+    public function __construct(UserService $service)
     {
-        $message = new CreateUserMessage($request);
+        $this->service = $service;
+    }
+
+    public function createUser(CreateUserMessage $message)
+    {
         $message->validateInput();
-        UserService::createUser($message);
+        $this->service->createUser($message);
         $message->validateOutput();
         return $message->getResponse();
     }
 
-    public function getUsers(Request $request)
+    public function getUsers(GetUsersMessage $message)
     {
-        $message = new GetUsersMessage($request);
         $message->validateInput();
-        UserService::getUsers($message);
+        $this->service->getUsers($message);
         $message->validateOutput();
         return $message->getResponse();
     }

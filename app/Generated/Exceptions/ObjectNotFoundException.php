@@ -2,7 +2,7 @@
 
 namespace App\Generated\Exceptions;
 
-use YetAnotherGenerator\Exceptions\BaseException;
+use Kamicloud\StubApi\Exceptions\BaseException;
 
 class ObjectNotFoundException extends BaseException
 {

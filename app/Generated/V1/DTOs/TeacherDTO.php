@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Generated\V1\Models;
+namespace App\Generated\V1\DTOs;
 
-use YetAnotherGenerator\Concerns\ValueHelper;
-use YetAnotherGenerator\Utils\Constants;
+use Kamicloud\StubApi\Concerns\ValueHelper;
+use Kamicloud\StubApi\DTOs\DTO;
+use App\Generated\V1\Models\TeacherDTO;
+use Kamicloud\StubApi\Utils\Constants;
 use App\Generated\V1\Enums\TeacherCatalog;
-use YetAnotherGenerator\DTOs\DTO;
 
-class TeacherModel extends DTO
+class TeacherDTO extends DTO
 {
     use ValueHelper;
 
@@ -166,7 +167,7 @@ class TeacherModel extends DTO
             ['pic', 'pic', 'bail|String', null],
             ['marks', 'marks', 'bail|int', Constants::IS_ARRAY],
             ['catalog', 'catalog', TeacherCatalog::class, Constants::IS_ENUM],
-            ['teachers', 'teachers', TeacherModel::class, Constants::IS_ARRAY | Constants::IS_MODEL],
+            ['teachers', 'teachers', TeacherDTO::class, Constants::IS_ARRAY | Constants::IS_MODEL],
             ['goodCmtRate', 'good_cmt_rate', 'bail|numeric', null],
             ['isMyFave', 'is_my_fave', 'bail|boolean', null],
             ['openClass', 'open_class', 'bail|int', Constants::IS_ARRAY],

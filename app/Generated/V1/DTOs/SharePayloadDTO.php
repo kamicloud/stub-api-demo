@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Generated\V1\Models;
+namespace App\Generated\V1\DTOs;
 
-use YetAnotherGenerator\Concerns\ValueHelper;
-use YetAnotherGenerator\Utils\Constants;
-use YetAnotherGenerator\DTOs\DTO;
+use Kamicloud\StubApi\Concerns\ValueHelper;
+use Kamicloud\StubApi\DTOs\DTO;
+use Kamicloud\StubApi\Utils\Constants;
 
-class SharePayloadModel extends DTO
+class SharePayloadDTO extends DTO
 {
     use ValueHelper;
 

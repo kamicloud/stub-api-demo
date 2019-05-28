@@ -5,14 +5,14 @@ namespace App\Http\Services\V1;
 use App\Generated\V1\Messages\Article\CreateArticleMessage;
 use App\Generated\V1\Messages\Article\GetArticleMessage;
 use App\Generated\V1\Messages\Article\GetArticlesMessage;
-use App\Generated\V1\Models\ArticleModel;
+use App\Generated\V1\DTOs\ArticleDTO;
 use App\Managers\ArticleManager;
 use App\Models\Article;
 use Auth;
 
 class ArticleService
 {
-    public static function getArticles(GetArticlesMessage $message)
+    public function getArticles(GetArticlesMessage $message)
     {
         $articles = ArticleManager::getArticles();
 
@@ -22,10 +22,10 @@ class ArticleService
             'comments',
         ]);
 
-        $message->setResponse(ArticleModel::initFromEloquents($articles));
+        $message->setResponse(ArticleDTO::initFromEloquents($articles));
     }
 
-    public static function getArticle(GetArticleMessage $message)
+    public function getArticle(GetArticleMessage $message)
     {
         $id = $message->getId();
 
@@ -37,12 +37,16 @@ class ArticleService
             'articleContent',
         ]);
 
-        $article->comments_count = $article->comments()->count();
+        $articleDTO = ArticleDTO::initFromEloquent($article);
 
-        $message->setResponse(ArticleModel::initFromEloquent($article));
+        $commentCount = $article->comments()->count();
+
+        $articleDTO->setCommentsCount($commentCount);
+
+        $message->setResponse($articleDTO);
     }
 
-    public static function createArticle(CreateArticleMessage $message)
+    public function createArticle(CreateArticleMessage $message)
     {
         $title = $message->getTitle();
         $content = $message->getContent();
@@ -56,6 +60,6 @@ class ArticleService
             'articleContent',
         ]);
 
-        $message->setResponse(ArticleModel::initFromEloquent($article));
+        $message->setResponse(ArticleDTO::initFromEloquent($article));
     }
 }

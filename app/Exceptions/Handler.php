@@ -3,8 +3,9 @@
 namespace App\Exceptions;
 
 use Exception;
-use YetAnotherGenerator\Exceptions\Handler as ExceptionHandler;
-use YetAnotherGenerator\Exceptions\BaseException;
+use Kamicloud\StubApi\Exceptions\Handler as ExceptionHandler;
+use Kamicloud\StubApi\Exceptions\BaseException;
+use Illuminate\Support\Str;
 
 class Handler extends ExceptionHandler
 {
@@ -24,7 +25,7 @@ class Handler extends ExceptionHandler
 
     public function render($request, Exception $exception)
     {
-        if (starts_with($request->getRequestUri(), '/admin')) {
+        if (Str::startsWith($request->getRequestUri(), '/admin')) {
             return response()->view('app');
         }
         return parent::render($request, $exception);

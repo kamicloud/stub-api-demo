@@ -6,7 +6,7 @@ use App\Generated\V1\Messages\AdminUser\GetUsersMessage;
 
 class AdminUserService
 {
-    public static function getUsers(GetUsersMessage $message)
+    public function getUsers(GetUsersMessage $message)
     {
     }
 }

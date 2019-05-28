@@ -11,7 +11,7 @@ return [
          * 在像旧版本软件包客户端无法校验时
          * 应返回指定的异常类型，而不应该使用错误参数异常
          */
-        'invalid-parameter-exception' => YetAnotherGenerator\Exceptions\InvalidParameterException::class,
+        'invalid-parameter-exception' => Kamicloud\StubApi\Exceptions\InvalidParameterException::class,
 
         /**
          * 服务器内部错误时返回的异常
@@ -19,6 +19,6 @@ return [
          * 程序在发生致命错误时会将异常转化为该异常，并记录原始异常到日志中
          * 该异常*** 不应该出现 ***
          */
-        'server-internal-error' => YetAnotherGenerator\Exceptions\ServerInternalErrorException::class,
+        'server-internal-error' => Kamicloud\StubApi\Exceptions\ServerInternalErrorException::class,
     ],
 ];

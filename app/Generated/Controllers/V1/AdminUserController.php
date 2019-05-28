@@ -4,17 +4,22 @@ namespace App\Generated\Controllers\V1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Services\V1\AdminUserService;
-use Illuminate\Http\Request;
 use DB;
 use App\Generated\V1\Messages\AdminUser\GetUsersMessage;
 
 class AdminUserController extends Controller
 {
-    public function getUsers(Request $request)
+    public $service;
+
+    public function __construct(AdminUserService $service)
     {
-        $message = new GetUsersMessage($request);
+        $this->service = $service;
+    }
+
+    public function getUsers(GetUsersMessage $message)
+    {
         $message->validateInput();
-        AdminUserService::getUsers($message);
+        $this->service->getUsers($message);
         $message->validateOutput();
         return $message->getResponse();
     }

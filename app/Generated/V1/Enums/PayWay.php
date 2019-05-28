@@ -2,7 +2,7 @@
 
 namespace App\Generated\V1\Enums;
 
-use YetAnotherGenerator\BOs\Enum;
+use Kamicloud\StubApi\BOs\Enum;
 
 class PayWay extends Enum
 {

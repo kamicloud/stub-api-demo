@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Generated\V1\Models;
+namespace App\Generated\V1\DTOs;
 
-use YetAnotherGenerator\Concerns\ValueHelper;
-use YetAnotherGenerator\Utils\Constants;
+use Kamicloud\StubApi\Concerns\ValueHelper;
+use Kamicloud\StubApi\DTOs\DTO;
+use Kamicloud\StubApi\Utils\Constants;
 use App\Generated\V1\Enums\TeacherLeaveReason;
-use YetAnotherGenerator\DTOs\DTO;
 
-class TeacherLeaveRecordModel extends DTO
+class TeacherLeaveRecordDTO extends DTO
 {
     use ValueHelper;
 
