@@ -7,17 +7,17 @@ use App\Models\User;
 
 class ArticleManager
 {
-    public static function getArticles()
+    public function getArticles()
     {
         return Article::get();
     }
 
-    public static function getArticle($id)
+    public function getArticle($id)
     {
         return Article::findOrFail($id);
     }
 
-    public static function createArticle(User $user, string $title, string $content)
+    public function createArticle(User $user, string $title, string $content)
     {
         $article = $user->articles()->create([
             'title' => $title,

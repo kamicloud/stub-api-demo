@@ -12,9 +12,16 @@ use Auth;
 
 class ArticleService
 {
+    protected $articleManager;
+
+    public function __construct(ArticleManager $articleManager)
+    {
+        $this->articleManager = $articleManager;
+    }
+
     public function getArticles(GetArticlesMessage $message)
     {
-        $articles = ArticleManager::getArticles();
+        $articles = $this->articleManager->getArticles();
 
         $articles->load([
             'user',
@@ -29,7 +36,7 @@ class ArticleService
     {
         $id = $message->getId();
 
-        $article = ArticleManager::getArticle($id);
+        $article = $this->articleManager->getArticle($id);
         /** @var Article $article */
 
         $article->load([
@@ -53,7 +60,7 @@ class ArticleService
 
         $user = Auth::user();
 
-        $article = ArticleManager::createArticle($user, $title, $content);
+        $article = $this->articleManager->createArticle($user, $title, $content);
 
         $article->load([
             'user',
