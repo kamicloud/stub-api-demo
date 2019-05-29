@@ -239,6 +239,7 @@ class TemplateV1 {
             /**
              * 添加文章
              */
+            @Transactional
             class CreateArticle {
                 @Request
                 String title;
@@ -247,6 +248,19 @@ class TemplateV1 {
 
                 @Response
                 Models.Article article;
+            }
+
+            /**
+             * 获取文章评论
+             */
+            class GetArticleComments {
+                @Request
+                Integer articleId;
+                @Request
+                Integer page;
+
+                @Response
+                Models.ArticleComment[] comments;
             }
         }
         /**

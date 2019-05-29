@@ -3,9 +3,9 @@
 namespace App\Generated\V1\DTOs;
 
 use Kamicloud\StubApi\Concerns\ValueHelper;
-use App\Generated\V1\Models\UserDTO;
 use Kamicloud\StubApi\DTOs\DTO;
 use Kamicloud\StubApi\Utils\Constants;
+use App\Generated\V1\DTOs\UserDTO;
 use App\Generated\V1\Enums\ArticleStatus;
 
 class ArticleDTO extends DTO

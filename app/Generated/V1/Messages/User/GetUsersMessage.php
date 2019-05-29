@@ -4,9 +4,9 @@ namespace App\Generated\V1\Messages\User;
 
 use App\Generated\V1\Enums\Gender;
 use Kamicloud\StubApi\Concerns\ValueHelper;
-use App\Generated\V1\Models\UserDTO;
 use Kamicloud\StubApi\Http\Messages\Message;
 use Kamicloud\StubApi\Utils\Constants;
+use App\Generated\V1\DTOs\UserDTO;
 
 class GetUsersMessage extends Message
 {

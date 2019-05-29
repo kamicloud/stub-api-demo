@@ -12,7 +12,7 @@ class ArticleManager
         return Article::get();
     }
 
-    public function getArticle($id)
+    public function getArticle($id): Article
     {
         return Article::findOrFail($id);
     }

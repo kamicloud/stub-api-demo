@@ -2,6 +2,7 @@
 
 namespace App\Generated\Controllers\V1;
 
+use Illuminate\Contracts\Foundation\Application;
 use App\Generated\V1\Messages\User\GetUsersMessage;
 use App\Generated\V1\Messages\User\CreateUserMessage;
 use App\Http\Controllers\Controller;
@@ -10,17 +11,19 @@ use DB;
 
 class UserController extends Controller
 {
-    public $service;
+    protected $application;
 
-    public function __construct(UserService $service)
+    public function __construct(Application $application)
     {
-        $this->service = $service;
+        $this->application = $application;
+        $this->application->singleton(CreateUserMessage::class);
+        $this->application->singleton(GetUsersMessage::class);
     }
 
     public function createUser(CreateUserMessage $message)
     {
         $message->validateInput();
-        $this->service->createUser($message);
+        $this->application->call(UserService::class, [], 'createUser');
         $message->validateOutput();
         return $message->getResponse();
     }
@@ -28,7 +31,7 @@ class UserController extends Controller
     public function getUsers(GetUsersMessage $message)
     {
         $message->validateInput();
-        $this->service->getUsers($message);
+        $this->application->call(UserService::class, [], 'getUsers');
         $message->validateOutput();
         return $message->getResponse();
     }

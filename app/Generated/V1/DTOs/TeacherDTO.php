@@ -4,7 +4,6 @@ namespace App\Generated\V1\DTOs;
 
 use Kamicloud\StubApi\Concerns\ValueHelper;
 use Kamicloud\StubApi\DTOs\DTO;
-use App\Generated\V1\Models\TeacherDTO;
 use Kamicloud\StubApi\Utils\Constants;
 use App\Generated\V1\Enums\TeacherCatalog;
 

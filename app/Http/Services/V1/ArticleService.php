@@ -7,7 +7,7 @@ use App\Generated\V1\Messages\Article\GetArticleMessage;
 use App\Generated\V1\Messages\Article\GetArticlesMessage;
 use App\Generated\V1\DTOs\ArticleDTO;
 use App\Managers\ArticleManager;
-use App\Models\Article;
+use App\Generated\V1\Messages\Article\GetArticleCommentsMessage;
 use Auth;
 
 class ArticleService
@@ -37,7 +37,6 @@ class ArticleService
         $id = $message->getId();
 
         $article = $this->articleManager->getArticle($id);
-        /** @var Article $article */
 
         $article->load([
             'user',
@@ -69,4 +68,9 @@ class ArticleService
 
         $message->setResponse(ArticleDTO::initFromEloquent($article));
     }
+
+    public function getArticleComments(GetArticleCommentsMessage $message)
+    {
+    }
+
 }

@@ -363,6 +363,89 @@
       "name": "Article ",
       "item": [
         {
+          "name": "GetArticleComments 获取文章评论",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "articleId",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "page",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                }
+              ],
+              "urlencoded": [
+                {
+                  "key": "__access_token",
+                  "value": "{{access_token}}",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "articleId",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "page",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                }
+              ]
+            },
+            "url": {
+              "protocol": "http",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "article",
+                "get_article_comments"
+              ]
+            },
+            "description": "获取文章评论"
+          }
+        },
+        {
           "name": "CreateArticle 添加文章",
           "request": {
             "method": "POST",

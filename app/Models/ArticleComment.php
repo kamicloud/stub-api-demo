@@ -42,13 +42,17 @@ class ArticleComment extends Model
 {
     use SoftDeletes;
 
-    protected $dates = ['deleted_at'];
+    protected $dates = [
+        'deleted_at',
+    ];
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function article() {
+    public function article()
+    {
         return $this->belongsTo(Article::class);
     }
 }

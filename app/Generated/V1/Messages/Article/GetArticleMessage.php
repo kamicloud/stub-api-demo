@@ -5,7 +5,7 @@ namespace App\Generated\V1\Messages\Article;
 use Kamicloud\StubApi\Concerns\ValueHelper;
 use Kamicloud\StubApi\Http\Messages\Message;
 use Kamicloud\StubApi\Utils\Constants;
-use App\Generated\V1\Models\ArticleDTO;
+use App\Generated\V1\DTOs\ArticleDTO;
 
 class GetArticleMessage extends Message
 {
