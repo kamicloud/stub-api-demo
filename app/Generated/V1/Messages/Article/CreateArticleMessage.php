@@ -15,11 +15,17 @@ class CreateArticleMessage extends Message
     protected $content;
     protected $article;
 
+    /**
+     * @return string
+     */
     public function getTitle()
     {
         return $this->title;
     }
 
+    /**
+     * @return string
+     */
     public function getContent()
     {
         return $this->content;
@@ -28,15 +34,15 @@ class CreateArticleMessage extends Message
     public function requestRules()
     {
         return [
-            ['title', 'title', 'bail|String', null],
-            ['content', 'content', 'bail|String', null],
+            ['title', 'title', 'bail|string', null, null],
+            ['content', 'content', 'bail|string', null, null],
         ];
     }
 
     public function responseRules()
     {
         return [
-            ['article', 'article', ArticleDTO::class, Constants::IS_MODEL],
+            ['article', 'article', ArticleDTO::class, Constants::MODEL, null],
         ];
     }
 

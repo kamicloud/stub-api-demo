@@ -14,6 +14,9 @@ class GetArticleMessage extends Message
     protected $id;
     protected $article;
 
+    /**
+     * @return int
+     */
     public function getId()
     {
         return $this->id;
@@ -22,14 +25,14 @@ class GetArticleMessage extends Message
     public function requestRules()
     {
         return [
-            ['id', 'id', 'bail|Integer', null],
+            ['id', 'id', 'bail|integer', null, null],
         ];
     }
 
     public function responseRules()
     {
         return [
-            ['article', 'article', ArticleDTO::class, Constants::IS_MODEL],
+            ['article', 'article', ArticleDTO::class, Constants::MODEL, null],
         ];
     }
 

@@ -12,6 +12,9 @@ class UserProfileDTO extends DTO
 
     protected $name;
 
+    /**
+     * @return string
+     */
     public function getName()
     {
         return $this->name;
@@ -25,7 +28,7 @@ class UserProfileDTO extends DTO
     public function getAttributeMap()
     {
         return [
-            ['name', 'name', 'bail|String', null],
+            ['name', 'name', 'bail|string', null, null],
         ];
     }
 

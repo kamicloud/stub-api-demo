@@ -25,31 +25,49 @@ class TeacherDTO extends DTO
     protected $sortTchTime;
     protected $isRecommended;
 
+    /**
+     * @return int
+     */
     public function getTeacherId()
     {
         return $this->teacherId;
     }
 
+    /**
+     * @return string
+     */
     public function getNickname()
     {
         return $this->nickname;
     }
 
+    /**
+     * @return string
+     */
     public function getPic()
     {
         return $this->pic;
     }
 
+    /**
+     * @return int[]
+     */
     public function getMarks()
     {
         return $this->marks;
     }
 
+    /**
+     * @return TeacherCatalog
+     */
     public function getCatalog()
     {
         return $this->catalog;
     }
 
+    /**
+     * @return TeacherDTO[]
+     */
     public function getTeachers()
     {
         return $this->teachers;
@@ -57,37 +75,72 @@ class TeacherDTO extends DTO
 
     /**
      * 好评率，以1为单位
+     * @return float
      */
     public function getGoodCmtRate()
     {
         return $this->goodCmtRate;
     }
 
+    /**
+     * @return boolean
+     */
+    public function getIsMyFave()
+    {
+        return $this->isMyFave;
+    }
+
+    /**
+     * @return boolean
+     */
     public function isIsMyFave()
     {
         return $this->isMyFave;
     }
 
+    /**
+     * @return int[]
+     */
     public function getOpenClass()
     {
         return $this->openClass;
     }
 
+    /**
+     * @return int
+     */
     public function getOkClass()
     {
         return $this->okClass;
     }
 
+    /**
+     * @return int
+     */
     public function getClassNum()
     {
         return $this->classNum;
     }
 
+    /**
+     * @return \Illuminate\Support\Carbon
+     */
     public function getSortTchTime()
     {
         return $this->sortTchTime;
     }
 
+    /**
+     * @return boolean
+     */
+    public function getIsRecommended()
+    {
+        return $this->isRecommended;
+    }
+
+    /**
+     * @return boolean
+     */
     public function isIsRecommended()
     {
         return $this->isRecommended;
@@ -161,19 +214,19 @@ class TeacherDTO extends DTO
     public function getAttributeMap()
     {
         return [
-            ['teacherId', 'id', 'bail|int', null],
-            ['nickname', 'nickname', 'bail|String', null],
-            ['pic', 'pic', 'bail|String', null],
-            ['marks', 'marks', 'bail|int', Constants::IS_ARRAY],
-            ['catalog', 'catalog', TeacherCatalog::class, Constants::IS_ENUM],
-            ['teachers', 'teachers', TeacherDTO::class, Constants::IS_ARRAY | Constants::IS_MODEL],
-            ['goodCmtRate', 'good_cmt_rate', 'bail|numeric', null],
-            ['isMyFave', 'is_my_fave', 'bail|boolean', null],
-            ['openClass', 'open_class', 'bail|int', Constants::IS_ARRAY],
-            ['okClass', 'ok_class', 'bail|int', null],
-            ['classNum', 'class_num', 'bail|int', null],
-            ['sortTchTime', 'sort_tch_time', 'Date', null],
-            ['isRecommended', 'is_recommended', 'bail|boolean', null],
+            ['teacherId', 'id', 'bail|integer', null, null],
+            ['nickname', 'nickname', 'bail|string', null, null],
+            ['pic', 'pic', 'bail|string', null, null],
+            ['marks', 'marks', 'bail|integer', Constants::ARRAY, null],
+            ['catalog', 'catalog', TeacherCatalog::class, Constants::ENUM, null],
+            ['teachers', 'teachers', TeacherDTO::class, Constants::ARRAY | Constants::MODEL, null],
+            ['goodCmtRate', 'good_cmt_rate', 'bail|numeric', null, 'numeric'],
+            ['isMyFave', 'is_my_fave', 'bail|null', null, null],
+            ['openClass', 'open_class', 'bail|integer', Constants::ARRAY, null],
+            ['okClass', 'ok_class', 'bail|integer', null, null],
+            ['classNum', 'class_num', 'bail|integer', null, null],
+            ['sortTchTime', 'sort_tch_time', 'bail|date_format:Y-m-d H:i:s', null, 'Y-m-d H:i:s'],
+            ['isRecommended', 'is_recommended', 'bail|null', null, null],
         ];
     }
 

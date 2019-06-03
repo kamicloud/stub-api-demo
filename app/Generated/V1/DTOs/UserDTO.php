@@ -16,6 +16,7 @@ class UserDTO extends DTO
 
     /**
      * 这里只是留了一个备注
+     * @return string
      */
     public function getName()
     {
@@ -24,12 +25,16 @@ class UserDTO extends DTO
 
     /**
      * 一个注释
+     * @return int
      */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @return string
+     */
     public function getAvatar()
     {
         return $this->avatar;
@@ -53,9 +58,9 @@ class UserDTO extends DTO
     public function getAttributeMap()
     {
         return [
-            ['name', 'name', 'bail|String', null],
-            ['id', 'id', 'bail|Integer', Constants::IS_MUTABLE],
-            ['avatar', 'avatar', 'bail|String', null],
+            ['name', 'name', 'bail|string', null, null],
+            ['id', 'id', 'bail|integer', Constants::MUTABLE, null],
+            ['avatar', 'avatar', 'bail|string', null, null],
         ];
     }
 

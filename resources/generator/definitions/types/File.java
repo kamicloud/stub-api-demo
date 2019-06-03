@@ -1,8 +1,25 @@
 package definitions.types;
 
-public class File implements CustomizeInterface {
+import definitions.official.TypeSpec;
+
+public class File extends Type {
     @Override
-    public String getType() {
+    public TypeSpec getSpec() {
+        return TypeSpec.FILE;
+    }
+
+    @Override
+    public String getComment() {
+        return "file";
+    }
+
+    @Override
+    public String getLaravelRule() {
+        return "file";
+    }
+
+    @Override
+    public String getLaravelParam() {
         return "file";
     }
 }

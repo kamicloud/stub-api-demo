@@ -15,16 +15,25 @@ class TeacherLeaveRecordDTO extends DTO
     protected $tname;
     protected $reason;
 
+    /**
+     * @return int
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @return string
+     */
     public function getTname()
     {
         return $this->tname;
     }
 
+    /**
+     * @return TeacherLeaveReason
+     */
     public function getReason()
     {
         return $this->reason;
@@ -48,9 +57,9 @@ class TeacherLeaveRecordDTO extends DTO
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', 'bail|Integer', Constants::IS_MUTABLE],
-            ['tname', 'tname', 'bail|String', null],
-            ['reason', 'reason', TeacherLeaveReason::class, Constants::IS_ENUM],
+            ['id', 'id', 'bail|integer', Constants::MUTABLE, null],
+            ['tname', 'tname', 'bail|string', null, null],
+            ['reason', 'reason', TeacherLeaveReason::class, Constants::ENUM, null],
         ];
     }
 

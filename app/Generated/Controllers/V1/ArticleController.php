@@ -2,7 +2,6 @@
 
 namespace App\Generated\Controllers\V1;
 
-use Illuminate\Contracts\Foundation\Application;
 use App\Http\Services\V1\ArticleService;
 use App\Generated\V1\Messages\Article\GetArticlesMessage;
 use App\Http\Controllers\Controller;
@@ -13,30 +12,26 @@ use DB;
 
 class ArticleController extends Controller
 {
-    protected $application;
+    public $handler;
 
-    public function __construct(Application $application)
+    public function __construct(ArticleService $handler)
     {
-        $this->application = $application;
-        $this->application->singleton(GetArticleCommentsMessage::class);
-        $this->application->singleton(CreateArticleMessage::class);
-        $this->application->singleton(GetArticleMessage::class);
-        $this->application->singleton(GetArticlesMessage::class);
+        $this->handler = $handler;
     }
 
     public function getArticleComments(GetArticleCommentsMessage $message)
     {
         $message->validateInput();
-        $this->application->call(ArticleService::class, [], 'getArticleComments');
+        $this->handler->getArticleComments($message);
         $message->validateOutput();
         return $message->getResponse();
     }
 
     public function createArticle(CreateArticleMessage $message)
     {
-        return DB::transaction(function () use ($message) {
+        return DB::transaction(function () use ($request) {
             $message->validateInput();
-            $this->application->call(ArticleService::class, [], 'createArticle');
+            $this->handler->createArticle($message);
             $message->validateOutput();
             return $message->getResponse();
         });
@@ -45,7 +40,7 @@ class ArticleController extends Controller
     public function getArticle(GetArticleMessage $message)
     {
         $message->validateInput();
-        $this->application->call(ArticleService::class, [], 'getArticle');
+        $this->handler->getArticle($message);
         $message->validateOutput();
         return $message->getResponse();
     }
@@ -53,7 +48,7 @@ class ArticleController extends Controller
     public function getArticles(GetArticlesMessage $message)
     {
         $message->validateInput();
-        $this->application->call(ArticleService::class, [], 'getArticles');
+        $this->handler->getArticles($message);
         $message->validateOutput();
         return $message->getResponse();
     }

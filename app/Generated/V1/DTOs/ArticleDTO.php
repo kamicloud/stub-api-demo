@@ -22,31 +22,49 @@ class ArticleDTO extends DTO
     protected $hot;
     protected $createdAt;
 
+    /**
+     * @return int|null
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @return string
+     */
     public function getTitle()
     {
         return $this->title;
     }
 
+    /**
+     * @return string|null
+     */
     public function getContent()
     {
         return $this->content;
     }
 
+    /**
+     * @return UserDTO
+     */
     public function getUser()
     {
         return $this->user;
     }
 
+    /**
+     * @return ArticleStatus
+     */
     public function getStatus()
     {
         return $this->status;
     }
 
+    /**
+     * @return int|null
+     */
     public function getCommentsCount()
     {
         return $this->commentsCount;
@@ -54,6 +72,7 @@ class ArticleDTO extends DTO
 
     /**
      * 需要时用于标记是否收藏
+     * @return boolean|null
      */
     public function getFavorite()
     {
@@ -61,13 +80,35 @@ class ArticleDTO extends DTO
     }
 
     /**
+     * 需要时用于标记是否收藏
+     * @return boolean|null
+     */
+    public function isFavorite()
+    {
+        return $this->favorite;
+    }
+
+    /**
      * 是否是添加火热标记
+     * @return boolean|null
      */
     public function getHot()
     {
         return $this->hot;
     }
 
+    /**
+     * 是否是添加火热标记
+     * @return boolean|null
+     */
+    public function isHot()
+    {
+        return $this->hot;
+    }
+
+    /**
+     * @return \Illuminate\Support\Carbon
+     */
     public function getCreatedAt()
     {
         return $this->createdAt;
@@ -121,15 +162,15 @@ class ArticleDTO extends DTO
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', 'nullable|bail|Integer', Constants::IS_OPTIONAL | Constants::IS_MUTABLE],
-            ['title', 'title', 'bail|String', null],
-            ['content', 'content', 'nullable|bail|String', Constants::IS_OPTIONAL],
-            ['user', 'user', UserDTO::class, Constants::IS_MODEL],
-            ['status', 'status', ArticleStatus::class, Constants::IS_ENUM],
-            ['commentsCount', 'comments_count', 'nullable|bail|Integer', Constants::IS_OPTIONAL],
-            ['favorite', 'favorite', 'nullable|bail|Boolean', Constants::IS_OPTIONAL],
-            ['hot', 'hot', 'nullable|bail|Boolean', Constants::IS_OPTIONAL],
-            ['createdAt', 'created_at', 'Date', null],
+            ['id', 'id', 'bail|nullable|integer', Constants::OPTIONAL | Constants::MUTABLE, null],
+            ['title', 'title', 'bail|string', null, null],
+            ['content', 'content', 'bail|nullable|string', Constants::OPTIONAL, null],
+            ['user', 'user', UserDTO::class, Constants::MODEL, null],
+            ['status', 'status', ArticleStatus::class, Constants::ENUM, null],
+            ['commentsCount', 'comments_count', 'bail|nullable|integer', Constants::OPTIONAL, null],
+            ['favorite', 'favorite', 'bail|nullable|null', Constants::OPTIONAL, null],
+            ['hot', 'hot', 'bail|nullable|null', Constants::OPTIONAL, null],
+            ['createdAt', 'created_at', 'bail|date_format:Y-m-d H:i:s', null, 'Y-m-d H:i:s'],
         ];
     }
 

@@ -16,21 +16,33 @@ class ArticleCommentDTO extends DTO
     protected $content;
     protected $createdAt;
 
+    /**
+     * @return int
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @return UserDTO
+     */
     public function getUser()
     {
         return $this->user;
     }
 
+    /**
+     * @return string
+     */
     public function getContent()
     {
         return $this->content;
     }
 
+    /**
+     * @return \Illuminate\Support\Carbon
+     */
     public function getCreatedAt()
     {
         return $this->createdAt;
@@ -59,10 +71,10 @@ class ArticleCommentDTO extends DTO
     public function getAttributeMap()
     {
         return [
-            ['id', 'id', 'bail|Integer', null],
-            ['user', 'user', UserDTO::class, Constants::IS_MODEL],
-            ['content', 'content', 'bail|String', null],
-            ['createdAt', 'created_at', 'Date', null],
+            ['id', 'id', 'bail|integer', null, null],
+            ['user', 'user', UserDTO::class, Constants::MODEL, null],
+            ['content', 'content', 'bail|string', null, null],
+            ['createdAt', 'created_at', 'bail|date_format:Y-m-d H:i:s', null, 'Y-m-d H:i:s'],
         ];
     }
 

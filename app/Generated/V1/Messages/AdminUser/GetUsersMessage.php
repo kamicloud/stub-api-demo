@@ -13,11 +13,17 @@ class GetUsersMessage extends Message
     protected $strings;
     protected $ints;
 
+    /**
+     * @return string[]
+     */
     public function getStrings()
     {
         return $this->strings;
     }
 
+    /**
+     * @return int[]
+     */
     public function getInts()
     {
         return $this->ints;
@@ -26,8 +32,8 @@ class GetUsersMessage extends Message
     public function requestRules()
     {
         return [
-            ['strings', 'strings', 'bail|String', Constants::IS_ARRAY],
-            ['ints', 'ints', 'bail|int', Constants::IS_ARRAY],
+            ['strings', 'strings', 'bail|string', Constants::ARRAY, null],
+            ['ints', 'ints', 'bail|integer', Constants::ARRAY, null],
         ];
     }
 

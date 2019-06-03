@@ -15,11 +15,17 @@ class GetArticleCommentsMessage extends Message
     protected $page;
     protected $comments;
 
+    /**
+     * @return int
+     */
     public function getArticleId()
     {
         return $this->articleId;
     }
 
+    /**
+     * @return int
+     */
     public function getPage()
     {
         return $this->page;
@@ -28,15 +34,15 @@ class GetArticleCommentsMessage extends Message
     public function requestRules()
     {
         return [
-            ['articleId', 'article_id', 'bail|Integer', null],
-            ['page', 'page', 'bail|Integer', null],
+            ['articleId', 'article_id', 'bail|integer', null, null],
+            ['page', 'page', 'bail|integer', null, null],
         ];
     }
 
     public function responseRules()
     {
         return [
-            ['comments', 'comments', ArticleCommentDTO::class, Constants::IS_ARRAY | Constants::IS_MODEL],
+            ['comments', 'comments', ArticleCommentDTO::class, Constants::ARRAY | Constants::MODEL, null],
         ];
     }
 

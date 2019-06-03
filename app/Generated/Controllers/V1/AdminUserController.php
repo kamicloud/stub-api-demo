@@ -2,7 +2,6 @@
 
 namespace App\Generated\Controllers\V1;
 
-use Illuminate\Contracts\Foundation\Application;
 use App\Http\Controllers\Controller;
 use App\Http\Services\V1\AdminUserService;
 use DB;
@@ -10,18 +9,17 @@ use App\Generated\V1\Messages\AdminUser\GetUsersMessage;
 
 class AdminUserController extends Controller
 {
-    protected $application;
+    public $handler;
 
-    public function __construct(Application $application)
+    public function __construct(AdminUserService $handler)
     {
-        $this->application = $application;
-        $this->application->singleton(GetUsersMessage::class);
+        $this->handler = $handler;
     }
 
     public function getUsers(GetUsersMessage $message)
     {
         $message->validateInput();
-        $this->application->call(AdminUserService::class, [], 'getUsers');
+        $this->handler->getUsers($message);
         $message->validateOutput();
         return $message->getResponse();
     }
