@@ -214,19 +214,19 @@ class TeacherDTO extends DTO
     public function getAttributeMap()
     {
         return [
-            ['teacherId', 'id', 'bail|integer', null, null],
-            ['nickname', 'nickname', 'bail|string', null, null],
-            ['pic', 'pic', 'bail|string', null, null],
-            ['marks', 'marks', 'bail|integer', Constants::ARRAY, null],
+            ['teacherId', 'id', 'bail|integer', Constants::INTEGER, null],
+            ['nickname', 'nickname', 'bail|string', Constants::STRING, null],
+            ['pic', 'pic', 'bail|string', Constants::STRING, null],
+            ['marks', 'marks', 'bail|integer', Constants::INTEGER | Constants::ARRAY, null],
             ['catalog', 'catalog', TeacherCatalog::class, Constants::ENUM, null],
-            ['teachers', 'teachers', TeacherDTO::class, Constants::ARRAY | Constants::MODEL, null],
-            ['goodCmtRate', 'good_cmt_rate', 'bail|numeric', null, 'numeric'],
-            ['isMyFave', 'is_my_fave', 'bail|null', null, null],
-            ['openClass', 'open_class', 'bail|integer', Constants::ARRAY, null],
-            ['okClass', 'ok_class', 'bail|integer', null, null],
-            ['classNum', 'class_num', 'bail|integer', null, null],
-            ['sortTchTime', 'sort_tch_time', 'bail|date_format:Y-m-d H:i:s', null, 'Y-m-d H:i:s'],
-            ['isRecommended', 'is_recommended', 'bail|null', null, null],
+            ['teachers', 'teachers', TeacherDTO::class, Constants::MODEL | Constants::ARRAY, null],
+            ['goodCmtRate', 'good_cmt_rate', 'bail|numeric', Constants::FLOAT, 'numeric'],
+            ['isMyFave', 'is_my_fave', 'bail|null', Constants::BOOLEAN, null],
+            ['openClass', 'open_class', 'bail|integer', Constants::INTEGER | Constants::ARRAY, null],
+            ['okClass', 'ok_class', 'bail|integer', Constants::INTEGER, null],
+            ['classNum', 'class_num', 'bail|integer', Constants::INTEGER, null],
+            ['sortTchTime', 'sort_tch_time', 'bail|date_format:Y-m-d H:i:s', Constants::DATE, 'Y-m-d H:i:s'],
+            ['isRecommended', 'is_recommended', 'bail|null', Constants::BOOLEAN, null],
         ];
     }
 

@@ -1,7 +1,7 @@
 package templates;
 
 import definitions.annotations.*;
-
+import definitions.types.*;
 import java.util.Date;
 
 /**

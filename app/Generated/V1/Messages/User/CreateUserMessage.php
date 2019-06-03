@@ -73,12 +73,12 @@ class CreateUserMessage extends Message
     public function requestRules()
     {
         return [
-            ['email', 'email', 'bail|string', null, null],
-            ['emails', 'emails', 'bail|string', Constants::ARRAY, null],
+            ['email', 'email', 'bail|string', Constants::STRING, null],
+            ['emails', 'emails', 'bail|string', Constants::STRING | Constants::ARRAY, null],
             ['gender', 'gender', Gender::class, Constants::ENUM, null],
-            ['genders', 'genders', Gender::class, Constants::ARRAY | Constants::ENUM, null],
-            ['id', 'id', 'bail|integer', null, null],
-            ['ids', 'ids', 'bail|integer', Constants::ARRAY, null],
+            ['genders', 'genders', Gender::class, Constants::ENUM | Constants::ARRAY, null],
+            ['id', 'id', 'bail|integer', Constants::INTEGER, null],
+            ['ids', 'ids', 'bail|integer', Constants::INTEGER | Constants::ARRAY, null],
         ];
     }
 
@@ -86,7 +86,7 @@ class CreateUserMessage extends Message
     {
         return [
             ['user', 'user', UserDTO::class, Constants::MODEL, null],
-            ['users', 'users', UserDTO::class, Constants::ARRAY | Constants::MODEL, null],
+            ['users', 'users', UserDTO::class, Constants::MODEL | Constants::ARRAY, null],
         ];
     }
 

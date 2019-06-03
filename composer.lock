@@ -798,12 +798,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kamicloud/stub-api.git",
-                "reference": "d6ddebaed7dde8065c1edba80fe6131c9bb2d66a"
+                "reference": "e838ff98e8674ca08a08fa2c8e48a40c1a158be0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kamicloud/stub-api/zipball/d6ddebaed7dde8065c1edba80fe6131c9bb2d66a",
-                "reference": "d6ddebaed7dde8065c1edba80fe6131c9bb2d66a",
+                "url": "https://api.github.com/repos/kamicloud/stub-api/zipball/e838ff98e8674ca08a08fa2c8e48a40c1a158be0",
+                "reference": "e838ff98e8674ca08a08fa2c8e48a40c1a158be0",
                 "shasum": ""
             },
             "require": {
@@ -843,7 +843,7 @@
                 }
             ],
             "description": "API Generator",
-            "time": "2019-06-03T12:55:27+00:00"
+            "time": "2019-06-03T13:27:57+00:00"
         },
         {
             "name": "laravel/framework",
