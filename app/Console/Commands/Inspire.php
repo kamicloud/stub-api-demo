@@ -21,6 +21,7 @@ class Inspire extends Command
 
     public function handle()
     {
+        dump(date('Y-m-d H:i:s', strtotime('2019-01')));
         dd(0b01 | 0b11);
         die;
         // 解析需测试文件

@@ -798,12 +798,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kamicloud/stub-api.git",
-                "reference": "e838ff98e8674ca08a08fa2c8e48a40c1a158be0"
+                "reference": "25effe4dd74b454b745f64b03abb3b0bbe638062"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kamicloud/stub-api/zipball/e838ff98e8674ca08a08fa2c8e48a40c1a158be0",
-                "reference": "e838ff98e8674ca08a08fa2c8e48a40c1a158be0",
+                "url": "https://api.github.com/repos/kamicloud/stub-api/zipball/25effe4dd74b454b745f64b03abb3b0bbe638062",
+                "reference": "25effe4dd74b454b745f64b03abb3b0bbe638062",
                 "shasum": ""
             },
             "require": {
@@ -843,7 +843,7 @@
                 }
             ],
             "description": "API Generator",
-            "time": "2019-06-03T13:27:57+00:00"
+            "time": "2019-06-04T12:44:06+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1727,16 +1727,16 @@
         },
         {
             "name": "overtrue/wechat",
-            "version": "4.1.23",
+            "version": "4.1.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/wechat.git",
-                "reference": "223d79b8f38a3ca93f499e9e80fcfefbfb0ad6d9"
+                "reference": "dad1e50a1e0af86b47991f01b4134b3128fd94b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/wechat/zipball/223d79b8f38a3ca93f499e9e80fcfefbfb0ad6d9",
-                "reference": "223d79b8f38a3ca93f499e9e80fcfefbfb0ad6d9",
+                "url": "https://api.github.com/repos/overtrue/wechat/zipball/dad1e50a1e0af86b47991f01b4134b3128fd94b9",
+                "reference": "dad1e50a1e0af86b47991f01b4134b3128fd94b9",
                 "shasum": ""
             },
             "require": {
@@ -1749,6 +1749,7 @@
                 "overtrue/socialite": "~2.0",
                 "php": ">=7.0",
                 "pimple/pimple": "^3.0",
+                "psr/simple-cache": "^1.0",
                 "symfony/cache": "^3.3 || ^4.0",
                 "symfony/http-foundation": "^2.7 || ^3.0 || ^4.0",
                 "symfony/psr-http-message-bridge": "^0.3 || ^1.0"
@@ -1757,7 +1758,7 @@
                 "mikey179/vfsstream": "^1.6",
                 "mockery/mockery": "^1.0",
                 "overtrue/phplint": "dev-master",
-                "phpunit/phpunit": "~7.5"
+                "phpunit/phpunit": "~6.5"
             },
             "type": "library",
             "autoload": {
@@ -1786,7 +1787,7 @@
                 "weixin",
                 "weixin-sdk"
             ],
-            "time": "2019-04-11T04:01:36+00:00"
+            "time": "2019-06-04T04:53:24+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -6864,12 +6865,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "279b310d2bcc0c239fd8875a44bcbc37dd1dafaf"
+                "reference": "09b9bc84abca8aa9313a74f24bd1bbd8dadaecc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/279b310d2bcc0c239fd8875a44bcbc37dd1dafaf",
-                "reference": "279b310d2bcc0c239fd8875a44bcbc37dd1dafaf",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/09b9bc84abca8aa9313a74f24bd1bbd8dadaecc8",
+                "reference": "09b9bc84abca8aa9313a74f24bd1bbd8dadaecc8",
                 "shasum": ""
             },
             "require": {
@@ -6930,7 +6931,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2019-06-03T11:56:56+00:00"
+            "time": "2019-06-04T09:57:19+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",

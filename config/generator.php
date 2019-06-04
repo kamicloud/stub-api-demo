@@ -21,4 +21,7 @@ return [
          */
         'server-internal-error' => Kamicloud\StubApi\Exceptions\ServerInternalErrorException::class,
     ],
+
+    'request-date-timestamp' => false,
+    'response-date-timestamp' => false,
 ];

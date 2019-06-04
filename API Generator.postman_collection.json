@@ -618,6 +618,13 @@
                   "type": "text",
                   "description": "",
                   "disabled": false
+                },
+                {
+                  "key": "ymd",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
                 }
               ],
               "urlencoded": [
@@ -631,6 +638,13 @@
                 {
                   "key": "__test_mode",
                   "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "ymd",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false

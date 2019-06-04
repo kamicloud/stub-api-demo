@@ -11,11 +11,21 @@ class GetArticlesMessage extends Message
 {
     use ValueHelper;
 
+    protected $ymd;
     protected $articles;
+
+    /**
+     * @return \Illuminate\Support\Carbon
+     */
+    public function getYmd()
+    {
+        return $this->ymd;
+    }
 
     public function requestRules()
     {
         return [
+            ['ymd', 'ymd', 'bail|date_format:Y-m-d', Constants::DATE, 'Y-m-d'],
         ];
     }
 

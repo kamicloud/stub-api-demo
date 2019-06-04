@@ -47,10 +47,6 @@
 |IN_CLASS|4| |
 <a name="TeacherLeaveReason"></a>
 ## TeacherLeaveReason
-
-> {warning} 教师请假原因
-详细的看代码吧
-
 |Key|Value|Description|
 |:-|:-|:-|
 |EVENT|0| |

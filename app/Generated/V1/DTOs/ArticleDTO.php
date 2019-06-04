@@ -170,7 +170,7 @@ class ArticleDTO extends DTO
             ['commentsCount', 'comments_count', 'bail|nullable|integer', Constants::INTEGER | Constants::OPTIONAL, null],
             ['favorite', 'favorite', 'bail|nullable|null', Constants::BOOLEAN | Constants::OPTIONAL, null],
             ['hot', 'hot', 'bail|nullable|null', Constants::BOOLEAN | Constants::OPTIONAL, null],
-            ['createdAt', 'created_at', 'bail|date_format:Y-m-d H:i:s', Constants::DATE, 'Y-m-d H:i:s'],
+            ['createdAt', 'created_at', 'bail|date_format:Y-m', Constants::DATE, 'Y-m'],
         ];
     }
 

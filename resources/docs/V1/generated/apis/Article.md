@@ -79,6 +79,11 @@
 
 > {warning} 获取文章列表
 
+### Requests
+|Key|Description|Type|Required|
+|:-|:-|:-|:-|
+|ymd | |`DateYmd`|true|
+
 ### Responses
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|

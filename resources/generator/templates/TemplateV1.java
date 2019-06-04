@@ -12,27 +12,6 @@ class TemplateV1 {
 
 
     public static class Enums {
-        /**
-         * 教师请假原因
-         *
-         * 详细的看代码吧
-         */
-//        enum TeacherLeaveReason {
-//            /**
-//             * 事件
-//             */
-//            EVENT,
-//            /**
-//             * 休息
-//             */
-//            RELAX,
-//            /**
-//             * 活动
-//             */
-//            ACTIVITY
-//        }
-
-
         @Memo({
             "教师请假原因",
             "详细的看代码吧"
@@ -205,7 +184,7 @@ class TemplateV1 {
              */
             @Optional
             Boolean hot;
-            Date createdAt;
+            DateYm createdAt;
         }
 
         class ArticleComment {
@@ -222,6 +201,8 @@ class TemplateV1 {
              * 获取文章列表
              */
             class GetArticles {
+                @Request
+                DateYmd ymd;
                 @Response
                 Models.Article[] articles;
             }

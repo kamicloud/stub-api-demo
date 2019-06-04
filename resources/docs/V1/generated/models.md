@@ -59,7 +59,7 @@
 |commentsCount | |`Integer`| |
 |favorite |需要时用于标记是否收藏|`Boolean`| |
 |hot |是否是添加火热标记|`Boolean`| |
-|createdAt | |`Date`|true|
+|createdAt | |`DateYm`|true|
 
 <a name="TeacherLeaveRecord"></a>
 ## TeacherLeaveRecord
