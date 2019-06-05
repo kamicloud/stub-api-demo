@@ -42,11 +42,11 @@ generator:
 
     nodejs-client:
       enabled: true
-      output: ./src/output/nodejs-client
+      output: ./resources/js/apis
 
 spring:
   thymeleaf:
     mode: TEXT
     suffix: .stub
     encoding: UTF-8
-    prefix: classpath:/templates/
+    prefix: classpath:/stubs/

@@ -124,6 +124,7 @@ export default {
     }
   },
   user: (state = {}, action) => {
+    return null;
     switch (action.type) {
       case constants.APP_INIT:
         return action.data.user;

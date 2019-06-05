@@ -2,7 +2,7 @@ import React from 'react';
 import Axios from 'axios';
 import { Table, Badge, Dropdown, Menu, Icon, Button, Modal, Tooltip, notification, Avatar  } from 'antd';
 import { Link } from 'react-router-dom';
-import api from '../../api.js';
+import API from '../../apis/API.js';
 
 const columns = [{
   title: 'ID',
@@ -54,7 +54,7 @@ class Articles extends React.Component {
     data: [],
   }
   componentDidMount() {
-    api.admin.article.getArticles({}).then(({data}) => {
+    API.Article.GetArticles({}).then(({data}) => {
       this.setState({
         data: data.articles,
       });

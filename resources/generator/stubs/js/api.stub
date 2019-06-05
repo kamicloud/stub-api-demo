@@ -1,0 +1,11 @@
+import axios from 'axios';
+
+export default {
+[# th:each="controller : ${template.controllers}"]  [(${controller.name})]: {
+[# th:each="action : ${controller.actions}"]    [(${action.value.name})]: async (data) => {
+      return await axios.post('[(${action.value.fullUri})]', data);
+    },
+[/]
+  },
+[/]
+}
