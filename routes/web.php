@@ -11,8 +11,6 @@
 |
 */
 
- Route::get('/', function () { return view('app'); });
-
 Route::get('onLogin', 'WechatController@onLogin');
 Route::get('getQR', 'WechatController@getQR');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');

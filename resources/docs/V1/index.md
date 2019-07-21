@@ -5,6 +5,7 @@
   - [Enums](/docs/{{version}}/generated/enums)
   - [Models](/docs/{{version}}/generated/models)
 - ## 接口文档
+  - [MoneyGame垃圾游戏相关接口](/docs/{{version}}/generated/apis/MoneyGame)
   - [User用户控制器](/docs/{{version}}/generated/apis/User)
   - [AdminUser后台用户控制器，用来提供和用户相关的后台接口](/docs/{{version}}/generated/apis/AdminUser)
   - [Article](/docs/{{version}}/generated/apis/Article)

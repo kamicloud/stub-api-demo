@@ -15,7 +15,7 @@ class GetArticlesMessage extends Message
     protected $articles;
 
     /**
-     * @return \Illuminate\Support\Carbon
+     * @return mixed
      */
     public function getYmd()
     {

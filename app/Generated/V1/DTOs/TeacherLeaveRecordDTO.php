@@ -32,7 +32,7 @@ class TeacherLeaveRecordDTO extends DTO
     }
 
     /**
-     * @return TeacherLeaveReason
+     * @return mixed
      */
     public function getReason()
     {

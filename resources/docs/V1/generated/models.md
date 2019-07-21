@@ -1,50 +1,33 @@
-  - [User](#User)
-  - [UserProfile](#UserProfile)
-  - [SharePayload](#SharePayload)
+  - [MoneyGameQuestion](#MoneyGameQuestion)
+  - [ArticleComment](#ArticleComment)
   - [Article](#Article)
+  - [SharePayload](#SharePayload)
   - [TeacherLeaveRecord](#TeacherLeaveRecord)
   - [Teacher](#Teacher)
-  - [ArticleComment](#ArticleComment)
+  - [UserProfile](#UserProfile)
+  - [User](#User)
 
-<a name="User"></a>
-## User
+<a name="MoneyGameQuestion"></a>
+## MoneyGameQuestion
 
-> {warning} 用户信息
-第二行
-用户信息
-第二行
+> {warning} 垃圾游戏问题
 
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|name |这里只是留了一个备注|`String`|true|
-|id |一个注释|`Integer`|true|
-|avatar | |`String`|true|
+|id | |`Integer`|true|
+|question | |`String`|true|
+|answer | |`String`|true|
 
-<a name="UserProfile"></a>
-## UserProfile
-
-> {warning} 用户的基本信息
-用户的基本信息
-
+<a name="ArticleComment"></a>
+## ArticleComment
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|name | |`String`|true|
-
-<a name="SharePayload"></a>
-## SharePayload
-
-> {warning} 一个分享场景的抽象
-一个分享场景的抽象
-
-### Attributes
-|Key|Description|Type|Required|
-|:-|:-|:-|:-|
-|title |分享的标题|`String`|true|
-|description |分享的描述|`String`|true|
-|icon |一个缩略图|`String`|true|
-|url |点进去的链接|`String`|true|
+|id | |`Integer`|true|
+|user | |[`Models.User`](/docs/{{version}}/generated/models#User)|true|
+|content | |`String`|true|
+|createdAt | |`Date`|true|
 
 <a name="Article"></a>
 ## Article
@@ -61,6 +44,19 @@
 |hot |是否是添加火热标记|`Boolean`| |
 |createdAt | |`DateYm`|true|
 
+<a name="SharePayload"></a>
+## SharePayload
+
+> {warning} 一个分享场景的抽象
+
+### Attributes
+|Key|Description|Type|Required|
+|:-|:-|:-|:-|
+|title |分享的标题|`String`|true|
+|description |分享的描述|`String`|true|
+|icon |一个缩略图|`String`|true|
+|url |点进去的链接|`String`|true|
+
 <a name="TeacherLeaveRecord"></a>
 ## TeacherLeaveRecord
 ### Attributes
@@ -74,7 +70,6 @@
 ## Teacher
 
 > {warning} 模拟一个老师的信息
-模拟一个老师的信息
 
 ### Attributes
 |Key|Description|Type|Required|
@@ -93,13 +88,26 @@
 |sortTchTime | |`Date`|true|
 |isRecommended | |`boolean`|true|
 
-<a name="ArticleComment"></a>
-## ArticleComment
+<a name="UserProfile"></a>
+## UserProfile
+
+> {warning} 用户的基本信息
+
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|id | |`Integer`|true|
-|user | |[`Models.User`](/docs/{{version}}/generated/models#User)|true|
-|content | |`String`|true|
-|createdAt | |`Date`|true|
+|name | |`String`|true|
+
+<a name="User"></a>
+## User
+
+> {warning} 用户信息
+第二行
+
+### Attributes
+|Key|Description|Type|Required|
+|:-|:-|:-|:-|
+|name |这里只是留了一个备注|`String`|true|
+|id |一个注释|`Integer`|true|
+|avatar | |`String`|true|
 

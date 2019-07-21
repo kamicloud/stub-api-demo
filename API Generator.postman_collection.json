@@ -6,6 +6,161 @@
   },
   "item": [
     {
+      "name": "MoneyGame 垃圾游戏相关接口",
+      "item": [
+        {
+          "name": "GetQuestions ",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__user",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "page",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                }
+              ],
+              "urlencoded": [
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__user",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "page",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                }
+              ]
+            },
+            "url": {
+              "protocol": "http",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "money_game",
+                "get_questions"
+              ]
+            }
+          }
+        },
+        {
+          "name": "AddQuestion ",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__user",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "question",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "answer",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                }
+              ],
+              "urlencoded": [
+                {
+                  "key": "__test_mode",
+                  "value": "1",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "__user",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "question",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                },
+                {
+                  "key": "answer",
+                  "value": "",
+                  "type": "text",
+                  "description": "",
+                  "disabled": false
+                }
+              ]
+            },
+            "url": {
+              "protocol": "http",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "money_game",
+                "add_question"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "User 用户控制器",
       "item": [
         {
@@ -17,15 +172,15 @@
               "mode": "formdata",
               "formdata": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -75,15 +230,15 @@
               ],
               "urlencoded": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -155,15 +310,15 @@
               "mode": "formdata",
               "formdata": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -206,15 +361,15 @@
               ],
               "urlencoded": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -284,15 +439,15 @@
               "mode": "formdata",
               "formdata": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -314,15 +469,15 @@
               ],
               "urlencoded": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -371,15 +526,15 @@
               "mode": "formdata",
               "formdata": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -401,15 +556,15 @@
               ],
               "urlencoded": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -454,15 +609,15 @@
               "mode": "formdata",
               "formdata": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -484,15 +639,15 @@
               ],
               "urlencoded": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -537,15 +692,15 @@
               "mode": "formdata",
               "formdata": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -560,15 +715,15 @@
               ],
               "urlencoded": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -606,15 +761,15 @@
               "mode": "formdata",
               "formdata": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false
@@ -629,15 +784,15 @@
               ],
               "urlencoded": [
                 {
-                  "key": "__access_token",
-                  "value": "{{access_token}}",
+                  "key": "__test_mode",
+                  "value": "1",
                   "type": "text",
                   "description": "",
                   "disabled": false
                 },
                 {
-                  "key": "__test_mode",
-                  "value": "1",
+                  "key": "__user",
+                  "value": "",
                   "type": "text",
                   "description": "",
                   "disabled": false

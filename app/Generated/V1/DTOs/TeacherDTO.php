@@ -58,7 +58,7 @@ class TeacherDTO extends DTO
     }
 
     /**
-     * @return TeacherCatalog
+     * @return mixed
      */
     public function getCatalog()
     {
@@ -123,7 +123,7 @@ class TeacherDTO extends DTO
     }
 
     /**
-     * @return \Illuminate\Support\Carbon
+     * @return mixed
      */
     public function getSortTchTime()
     {
@@ -221,12 +221,12 @@ class TeacherDTO extends DTO
             ['catalog', 'catalog', TeacherCatalog::class, Constants::ENUM, null],
             ['teachers', 'teachers', TeacherDTO::class, Constants::MODEL | Constants::ARRAY, null],
             ['goodCmtRate', 'good_cmt_rate', 'bail|numeric', Constants::FLOAT, 'numeric'],
-            ['isMyFave', 'is_my_fave', 'bail|null', Constants::BOOLEAN, null],
+            ['isMyFave', 'is_my_fave', 'bail|boolean', Constants::BOOLEAN, null],
             ['openClass', 'open_class', 'bail|integer', Constants::INTEGER | Constants::ARRAY, null],
             ['okClass', 'ok_class', 'bail|integer', Constants::INTEGER, null],
             ['classNum', 'class_num', 'bail|integer', Constants::INTEGER, null],
             ['sortTchTime', 'sort_tch_time', 'bail|date_format:Y-m-d H:i:s', Constants::DATE, 'Y-m-d H:i:s'],
-            ['isRecommended', 'is_recommended', 'bail|null', Constants::BOOLEAN, null],
+            ['isRecommended', 'is_recommended', 'bail|boolean', Constants::BOOLEAN, null],
         ];
     }
 

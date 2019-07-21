@@ -193,6 +193,15 @@ class TemplateV1 {
             String content;
             Date createdAt;
         }
+
+        /**
+         * 垃圾游戏问题
+         */
+        class MoneyGameQuestion {
+            Integer id;
+            String question;
+            String answer;
+        }
     }
 
     class Controllers {
@@ -315,6 +324,25 @@ class TemplateV1 {
                 Models.User user;
                 @Response
                 Models.User[] users;
+            }
+        }
+
+        /**
+         * 垃圾游戏相关接口
+         */
+        public class MoneyGame {
+            class AddQuestion {
+                @Request
+                String question;
+                @Request
+                String answer;
+            }
+
+            class GetQuestions {
+                @Request
+                Integer page;
+                @Response
+                Models.MoneyGameQuestion[] questions;
             }
         }
     }

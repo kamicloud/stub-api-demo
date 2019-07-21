@@ -1,5 +1,7 @@
 <?php
 
+Route::match(['POST'], '/v1/money_game/get_questions', 'V1\MoneyGameController@GetQuestions');
+Route::match(['POST'], '/v1/money_game/add_question', 'V1\MoneyGameController@AddQuestion');
 Route::match(['POST', 'POST'], '/v1/user/create_user', 'V1\UserController@CreateUser');
 Route::match(['POST', 'DELETE', 'POST'], '/v1/user/get_users', 'V1\UserController@GetUsers');
 Route::match(['POST', 'POST'], '/v1/admin_user/get_users', 'V1\AdminUserController@GetUsers');

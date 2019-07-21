@@ -55,7 +55,7 @@ class ArticleDTO extends DTO
     }
 
     /**
-     * @return ArticleStatus
+     * @return mixed
      */
     public function getStatus()
     {
@@ -107,7 +107,7 @@ class ArticleDTO extends DTO
     }
 
     /**
-     * @return \Illuminate\Support\Carbon
+     * @return mixed
      */
     public function getCreatedAt()
     {
@@ -168,8 +168,8 @@ class ArticleDTO extends DTO
             ['user', 'user', UserDTO::class, Constants::MODEL, null],
             ['status', 'status', ArticleStatus::class, Constants::ENUM, null],
             ['commentsCount', 'comments_count', 'bail|nullable|integer', Constants::INTEGER | Constants::OPTIONAL, null],
-            ['favorite', 'favorite', 'bail|nullable|null', Constants::BOOLEAN | Constants::OPTIONAL, null],
-            ['hot', 'hot', 'bail|nullable|null', Constants::BOOLEAN | Constants::OPTIONAL, null],
+            ['favorite', 'favorite', 'bail|nullable|boolean', Constants::BOOLEAN | Constants::OPTIONAL, null],
+            ['hot', 'hot', 'bail|nullable|boolean', Constants::BOOLEAN | Constants::OPTIONAL, null],
             ['createdAt', 'created_at', 'bail|date_format:Y-m', Constants::DATE, 'Y-m'],
         ];
     }

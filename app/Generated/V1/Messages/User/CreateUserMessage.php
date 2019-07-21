@@ -39,7 +39,7 @@ class CreateUserMessage extends Message
     }
 
     /**
-     * @return Gender
+     * @return mixed
      */
     public function getGender()
     {
@@ -47,7 +47,7 @@ class CreateUserMessage extends Message
     }
 
     /**
-     * @return Gender[]
+     * @return mixed[]
      */
     public function getGenders()
     {
