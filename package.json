@@ -20,7 +20,7 @@
     "dependencies": {
         "@antv/g2": "^3.4.8",
         "antd": "^3.11.6",
-        "axios": "^0.18.0",
+        "axios": "^0.21.1",
         "cross-env": "^5.2.0",
         "laravel-mix": "^4.0.12",
         "react": "^16.7.0",
