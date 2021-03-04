@@ -1,17 +1,14 @@
-  - [MoneyGameQuestion](#MoneyGameQuestion)
+  - [MoneyGameQuestion垃圾游戏问题](#MoneyGameQuestion)
   - [ArticleComment](#ArticleComment)
   - [Article](#Article)
-  - [SharePayload](#SharePayload)
+  - [SharePayload一个分享场景的抽象](#SharePayload)
   - [TeacherLeaveRecord](#TeacherLeaveRecord)
-  - [Teacher](#Teacher)
-  - [UserProfile](#UserProfile)
-  - [User](#User)
+  - [Teacher模拟一个老师的信息](#Teacher)
+  - [UserProfile用户的基本信息](#UserProfile)
+  - [`REST`User用户信息](#User)
 
 <a name="MoneyGameQuestion"></a>
-## MoneyGameQuestion
-
-> {warning} 垃圾游戏问题
-
+## MoneyGameQuestion垃圾游戏问题
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
@@ -45,10 +42,7 @@
 |createdAt | |`DateYm`|true|
 
 <a name="SharePayload"></a>
-## SharePayload
-
-> {warning} 一个分享场景的抽象
-
+## SharePayload一个分享场景的抽象
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
@@ -67,10 +61,7 @@
 |reason | |[`Enums.TeacherLeaveReason`](/docs/{{version}}/generated/enums#TeacherLeaveReason)|true|
 
 <a name="Teacher"></a>
-## Teacher
-
-> {warning} 模拟一个老师的信息
-
+## Teacher模拟一个老师的信息
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
@@ -89,25 +80,23 @@
 |isRecommended | |`boolean`|true|
 
 <a name="UserProfile"></a>
-## UserProfile
-
-> {warning} 用户的基本信息
-
+## UserProfile用户的基本信息
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
 |name | |`String`|true|
 
 <a name="User"></a>
-## User
+## `REST`User用户信息
+`/api/v1/restful/user`[DOC](https://laravel.com/docs/master/controllers#resource-controllers)
 
-> {warning} 用户信息
+> {primary} 用户信息
 第二行
 
 ### Attributes
 |Key|Description|Type|Required|
 |:-|:-|:-|:-|
-|name |这里只是留了一个备注|`String`|true|
 |id |一个注释|`Integer`|true|
+|name |这里只是留了一个备注|`String`|true|
 |avatar | |`String`|true|
 

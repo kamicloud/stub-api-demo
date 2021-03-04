@@ -1,3 +1,11 @@
+  - [ArticleStatus](#ArticleStatus)
+  - [Gender](#Gender)
+  - [ToolAllow上课工具枚举](#ToolAllow)
+  - [TeacherCatalog教师类型](#TeacherCatalog)
+  - [PayWay](#PayWay)
+  - [UserStatus用户状态](#UserStatus)
+  - [TeacherLeaveReason](#TeacherLeaveReason)
+
 <a name="ArticleStatus"></a>
 ## ArticleStatus
 |Key|Value|Description|
@@ -12,18 +20,12 @@
 |MALE|1| |
 |FEMALE|2| |
 <a name="ToolAllow"></a>
-## ToolAllow
-
-> {warning} 上课工具枚举
-
+## ToolAllow上课工具枚举
 |Key|Value|Description|
 |:-|:-|:-|
 |XXX|0| |
 <a name="TeacherCatalog"></a>
-## TeacherCatalog
-
-> {warning} 教师类型
-
+## TeacherCatalog教师类型
 |Key|Value|Description|
 |:-|:-|:-|
 |PHH|0| |
@@ -36,10 +38,7 @@
 |WECHAT|WECHAT| |
 |ALIPAY|ALIPAY| |
 <a name="UserStatus"></a>
-## UserStatus
-
-> {warning} 用户状态
-
+## UserStatus用户状态
 |Key|Value|Description|
 |:-|:-|:-|
 |INIT|0| |

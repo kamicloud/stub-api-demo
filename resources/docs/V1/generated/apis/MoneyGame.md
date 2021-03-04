@@ -1,7 +1,4 @@
-# MoneyGame
-
-> {warning} 垃圾游戏相关接口
-
+# MoneyGame垃圾游戏相关接口
 
 ---
 
